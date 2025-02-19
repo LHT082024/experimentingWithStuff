@@ -7,6 +7,9 @@ namespace idk
 {
     public class Allmagic
     {
+        List<ModelOfMagic> modelOfMagicss = new List<ModelOfMagic>(){
+            new ModelOfMagic {}
+        };
 
     }
 }

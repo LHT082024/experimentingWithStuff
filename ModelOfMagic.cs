@@ -7,6 +7,8 @@ namespace idk
 {
     public class ModelOfMagic
     {
-        public int Powerlvl { get; set; }
+        public int PowerlvlAdd { get; set; }
+        public string? Element { get; set; }
+        public string? NatureInspo { get; set; }
     }
 }
