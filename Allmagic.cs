@@ -7,7 +7,7 @@ namespace idk
 {
     public class Allmagic
     {
-        List<ModelOfMagic> modelOfMagicss = new List<ModelOfMagic>(){
+        public List<ModelOfMagic> modelOfMagicss = new List<ModelOfMagic>(){
             new ModelOfMagic {Element = "Eldritch", NatureInspo = "Water, lightning, Squid,", PowerlvlAdd = 10},
             new ModelOfMagic {Element = "Darkness", NatureInspo = "Ice, Shadows", PowerlvlAdd = 9},
             new ModelOfMagic {Element = "Holy", NatureInspo = "Air, bird", PowerlvlAdd = 9},

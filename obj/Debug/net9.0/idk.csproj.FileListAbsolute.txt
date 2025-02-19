@@ -12,3 +12,4 @@ C:\Users\lucie\Documents\Intro-HtmlCss\idk\obj\Debug\net9.0\refint\idk.dll
 C:\Users\lucie\Documents\Intro-HtmlCss\idk\obj\Debug\net9.0\idk.pdb
 C:\Users\lucie\Documents\Intro-HtmlCss\idk\obj\Debug\net9.0\idk.genruntimeconfig.cache
 C:\Users\lucie\Documents\Intro-HtmlCss\idk\obj\Debug\net9.0\ref\idk.dll
+C:\Users\lucie\Documents\Intro-HtmlCss\idk\obj\Debug\net9.0\idk.sourcelink.json
