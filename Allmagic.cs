@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace idk
 {
-    public class All magicc
+    public class Allmagic
     {
-        
+
     }
 }
