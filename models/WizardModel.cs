@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace idk.models
 {
+    //inteligence affect power lvl
     public class WizardModel
     {
         public string? Name { get; set; }
