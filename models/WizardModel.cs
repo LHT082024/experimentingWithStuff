@@ -11,6 +11,8 @@ namespace idk.models
         public string? Name { get; set; }
         public string? MagicType { get; set; }
         public int PowerLvl { get; set; }
+        public int Wisdom { get; set; }
+
 
     }
 }

@@ -1,9 +1,14 @@
-﻿namespace idk;
+﻿using idk.models;
+
+namespace idk;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        ModelOfMagic modelOfMagic = new();
+        WizardModel wizardModel = new();
+
+
     }
 }
