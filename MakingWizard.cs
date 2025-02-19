@@ -12,9 +12,11 @@ namespace idk
         Allmagic allmagic = new();
         WizardModel wizardModel = new();
 
-        public void CompleteWizards()
+        public void CompleteWizards(string magicElement)
         {
             wizardModel.Name = "Luka";
+            ModelOfMagic selectedMagic = allmagic.modelOfMagicss[0];
+
         }
 
     }
