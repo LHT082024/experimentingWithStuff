@@ -15,9 +15,6 @@ namespace idk
         public void CompleteWizards()
         {
             wizardModel.Name = "Luka";
-            wizardModel.MagicType = $"{modelOfMagic.Element = "Eldritch"}";
-            wizardModel.PowerLvl = modelOfMagic.PowerlvlAdd + 10;
-            Console.WriteLine($"Your name is: {wizardModel.Name}\n Your magic type is: {modelOfMagic.Element = "Eldritch"}\n your power level is {wizardModel.PowerLvl}");
         }
 
     }

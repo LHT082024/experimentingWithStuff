@@ -9,8 +9,8 @@ namespace idk.models
     public class WizardModel
     {
         public string? Name { get; set; }
-        public string? MagicType { get; set; }
-        public int PowerLvl { get; set; }
+        public ModelOfMagic? magic { get; set; }
+        public int PowerLvl => magic.PowerlvlAdd + 5;
         public int Wisdom { get; set; }
 
 
