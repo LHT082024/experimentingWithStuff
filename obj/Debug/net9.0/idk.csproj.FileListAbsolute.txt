@@ -1,0 +1,14 @@
+C:\Users\lucie\Documents\Intro-HtmlCss\idk\bin\Debug\net9.0\idk.exe
+C:\Users\lucie\Documents\Intro-HtmlCss\idk\bin\Debug\net9.0\idk.deps.json
+C:\Users\lucie\Documents\Intro-HtmlCss\idk\bin\Debug\net9.0\idk.runtimeconfig.json
+C:\Users\lucie\Documents\Intro-HtmlCss\idk\bin\Debug\net9.0\idk.dll
+C:\Users\lucie\Documents\Intro-HtmlCss\idk\bin\Debug\net9.0\idk.pdb
+C:\Users\lucie\Documents\Intro-HtmlCss\idk\obj\Debug\net9.0\idk.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucie\Documents\Intro-HtmlCss\idk\obj\Debug\net9.0\idk.AssemblyInfoInputs.cache
+C:\Users\lucie\Documents\Intro-HtmlCss\idk\obj\Debug\net9.0\idk.AssemblyInfo.cs
+C:\Users\lucie\Documents\Intro-HtmlCss\idk\obj\Debug\net9.0\idk.csproj.CoreCompileInputs.cache
+C:\Users\lucie\Documents\Intro-HtmlCss\idk\obj\Debug\net9.0\idk.dll
+C:\Users\lucie\Documents\Intro-HtmlCss\idk\obj\Debug\net9.0\refint\idk.dll
+C:\Users\lucie\Documents\Intro-HtmlCss\idk\obj\Debug\net9.0\idk.pdb
+C:\Users\lucie\Documents\Intro-HtmlCss\idk\obj\Debug\net9.0\idk.genruntimeconfig.cache
+C:\Users\lucie\Documents\Intro-HtmlCss\idk\obj\Debug\net9.0\ref\idk.dll
