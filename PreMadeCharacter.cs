@@ -113,8 +113,8 @@ namespace idk
                     Console.ReadKey();
                     break;
 
-                case "Human":
-                    Console.WriteLine("Seriosly you had the decision between a creature beoynd reality, a demon and an angel and you choose a human??!\nYou must be fun at parties...");
+                case "human":
+                    Console.WriteLine("Seriously you had the decision between a creature beoynd reality, a demon and an angel and you choose a human??!\nYou must be fun at parties...");
                     Console.ReadKey();
                     break;
             }
