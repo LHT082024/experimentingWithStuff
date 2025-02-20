@@ -7,6 +7,8 @@ namespace idk
 {
     public class FightingSystem
     {
+        string Wizard1 = "Wizards/Wizard-Luka";
+        string Wizard2 = "Wizards/Wizard-Matt";
 
     }
 }

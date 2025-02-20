@@ -18,7 +18,7 @@ namespace idk
             wizard.Name = "Matt";
             wizard.magic = allmagic.modelOfMagicss[1];
 
-            string CompleteWizard = $"Name: {wizard.Name}\n Element: {wizard.magic}\n Powerlvl {wizard.PowerLvl}";
+            string CompleteWizard = $"Name: {wizard.Name}\nElement: {wizard.magic}\nPowerlvl {wizard.PowerLvl}";
             string fileName = $" Wizard-{wizard.Name}.txt";
             string folderPath = "Wizards";
 
