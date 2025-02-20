@@ -12,7 +12,7 @@ namespace idk
         Lists Lists = new();
         WarriorModel warriorModel = new();
 
-        public void CompleteWizards(WarriorModel wizard)
+        public void CompleteCharacter(WarriorModel wizard)
         {
             //making a complete wizard
             wizard.Name = "Luka";
