@@ -13,6 +13,6 @@ class Program
         // readingWizards.Wizards();
         // readingWizards.Test();
 
-        makingWizard.MakeCharacter(myWizard);
+        makingWizard.Intro();
     }
 }

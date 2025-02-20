@@ -12,8 +12,9 @@ namespace idk
         Lists Lists = new();
         WarriorModel warriorModel = new();
 
-        public void MakeCharacter(WarriorModel warrior)
+        public void Intro()
         {
+            Console.WriteLine("Do you want to skip intro?")
             Console.WriteLine("You are sitting on a plane looking out the window.");
             Console.ReadKey();
 
@@ -29,7 +30,10 @@ namespace idk
             Console.WriteLine("\nyour blood runs cold as the engine of the plane starts");
             Console.ReadKey();
 
-            Console.WriteLine("\nYou have to get off, you have a good life YOU CAN'T DIE NOW! but it's to late, as you stand up ready to jump out of the plane you see a black car driving towards the place.");
+            Console.WriteLine("\nYou have to get off, you have a good life YOU CAN'T DIE NOW!");
+            Console.ReadKey();
+
+            Console.WriteLine("\nbut it's to late, as you stand up ready to jump out of the plane you see a black car driving towards the plane.");
             Console.Write("A masked man leans out the window takes out a rocket launcher and BANG!");
             Console.ReadKey();
 
@@ -42,6 +46,7 @@ namespace idk
             Console.WriteLine("\nYou open your eyes and see an annoying looking girl slapping your face. 'if you dont get up right now you are going to die!'");
             Console.Write("Please create your character");
 
+
             //making a complete wizard
             // wizard.Name = "Luka";
             // wizard.magic = Lists.modelOfMagicss[0];
@@ -53,6 +58,22 @@ namespace idk
             // string filePath = Path.Combine(folderPath, fileName);
 
             // File.WriteAllText(filePath, CompleteWizard);
+        }
+
+        public void CreateCharacter()
+        {
+            //choosing a name
+            Console.WriteLine("what is your name?");
+            string? newName = Console.ReadLine().ToLower();
+            warriorModel.Name = newName;
+
+            Console.WriteLine($"Your name is{warriorModel.Name}");
+
+            Console.WriteLine("Type in one of the listed species");
+            Console.WriteLine("Eldritch creature    Demonic Ancestor");
+            Console.WriteLine("Angelic Ancestor         Human       ");
+
+
         }
     }
 }
