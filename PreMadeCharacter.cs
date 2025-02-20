@@ -12,19 +12,47 @@ namespace idk
         Lists Lists = new();
         WarriorModel warriorModel = new();
 
-        public void CompleteCharacter(WarriorModel wizard)
+        public void MakeCharacter(WarriorModel warrior)
         {
+            Console.WriteLine("You are sitting on a plane looking out the window.");
+            Console.ReadKey();
+
+            Console.WriteLine("\nIt's a sunny day, yesturday your partner proposed over videochat too excited to wait for you to get home from the buisness trip");
+            Console.Write("But the good news dosent end there! Today you finally got that promotion. You will get a raise and afford a fancy wedding. Life is perfect");
+            Console.ReadKey();
+
+            Console.WriteLine("\nAn excited man sits down next to you");
+            Console.WriteLine("\n'I JUST HAVE TO TELL SOMEBODY' the man said facing you 'I JUST DISCOVERED A CURE FOR CANCER!'");
+            Console.ReadKey();
+
+
+            Console.WriteLine("\nyour blood runs cold as the engine of the plane starts");
+            Console.ReadKey();
+
+            Console.WriteLine("\nYou have to get off, you have a good life YOU CAN'T DIE NOW! but it's to late, as you stand up ready to jump out of the plane you see a black car driving towards the place.");
+            Console.Write("A masked man leans out the window takes out a rocket launcher and BANG!");
+            Console.ReadKey();
+
+            Console.WriteLine("\nDarkness....");
+            Console.ReadKey();
+
+            Console.WriteLine("\nWAKE UP WAKE UP WAKE UP WAKE UP");
+            Console.ReadKey();
+
+            Console.WriteLine("\nYou open your eyes and see an annoying looking girl slapping your face. 'if you dont get up right now you are going to die!'");
+            Console.Write("Please create your character");
+
             //making a complete wizard
-            wizard.Name = "Luka";
-            wizard.magic = Lists.modelOfMagicss[0];
+            // wizard.Name = "Luka";
+            // wizard.magic = Lists.modelOfMagicss[0];
 
-            string CompleteWizard = $"Name: {wizard.Name}\nElement: {wizard.magic}\nPowerlvl: {wizard.PowerLvl}";
-            string fileName = $"Wizard-{wizard.Name}";
-            string folderPath = "Wizards";
+            // string CompleteWizard = $"Name: {wizard.Name}\nElement: {wizard.magic}\nPowerlvl: {wizard.PowerLvl}";
+            // string fileName = $"Wizard-{wizard.Name}";
+            // string folderPath = "Wizards";
 
-            string filePath = Path.Combine(folderPath, fileName);
+            // string filePath = Path.Combine(folderPath, fileName);
 
-            File.WriteAllText(filePath, CompleteWizard);
+            // File.WriteAllText(filePath, CompleteWizard);
         }
     }
 }

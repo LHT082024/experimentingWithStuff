@@ -6,11 +6,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        PreMadeWizards makingWizard = new();
-        WizardModel myWizard = new();
+        PreMadeCharacter makingWizard = new();
+        WarriorModel myWizard = new();
         ReadingWizards readingWizards = new();
 
-        readingWizards.Wizards();
-        readingWizards.Test();
+        // readingWizards.Wizards();
+        // readingWizards.Test();
+
+        makingWizard.MakeCharacter(myWizard);
     }
 }
