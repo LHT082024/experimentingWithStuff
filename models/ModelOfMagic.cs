@@ -11,7 +11,10 @@ namespace idk
         public int PowerlvlAdd { get; set; }
         public string? NatureInspo { get; set; }
         public string? Species { get; set; }
+        public int Mana { get; set; }
+        public int Health { get; set; }
 
+        //make sure its saved as string
         public override string ToString()
         {
             return $"{Element}";

@@ -16,5 +16,7 @@ namespace idk
             new ModelOfMagic {Element = "EnchantedWeapon", NatureInspo = "Weapons", PowerlvlAdd = 3}
         };
 
+        public
+
     }
 }

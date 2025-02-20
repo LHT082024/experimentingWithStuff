@@ -9,14 +9,14 @@ namespace idk
     public class PreMadeWizards
     {
         ModelOfMagic modelOfMagic = new();
-        Allmagic allmagic = new();
+        Allmagic Lists = new();
         WizardModel wizardModel = new();
 
         public void CompleteWizards(WizardModel wizard)
         {
             //making a complete wizard
             wizard.Name = "Luka";
-            wizard.magic = allmagic.modelOfMagicss[0];
+            wizard.magic = Lists.modelOfMagicss[0];
 
             string CompleteWizard = $"Name: {wizard.Name}\nElement: {wizard.magic}\nPowerlvl: {wizard.PowerLvl}";
             string fileName = $"Wizard-{wizard.Name}";
