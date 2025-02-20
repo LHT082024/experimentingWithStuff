@@ -68,7 +68,7 @@ namespace idk
             return (wizard1Powerlvl, wizard2Powerlvl);
         }
 
-        public void test()
+        public void Test()
         {
             Console.WriteLine(wizard1Powerlvl);
             Console.WriteLine(wizard2Powerlvl);

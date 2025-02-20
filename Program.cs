@@ -12,9 +12,6 @@ class Program
         FightSystem fightSystem = new();
 
         readingWizards.Wizards();
-        readingWizards.test();
-        // fightSystem.FightPeople();
-
-        // makingWizard.CompleteWizards(myWizard);
+        readingWizards.Test();
     }
 }
