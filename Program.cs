@@ -12,10 +12,12 @@ class Program
         //generating a new wizard
         makingWizard.CompleteWizards(myWizard);
 
-        string filepath = $"Wizards/ Wizard Luka.txt";
+        string filepath = $"Wizards/Wizard-Luka.txt";
+        string[] lines = File.ReadAllLines(filepath);
 
-        Console.WriteLine(filepath);
-
-
+        foreach (string line in lines)
+        {
+            Console.WriteLine(line);
+        }
     }
 }
