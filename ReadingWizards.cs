@@ -5,23 +5,21 @@ using System.Threading.Tasks;
 
 namespace idk
 {
-    public class FightingSystem
+    public class ReadingWizards
     {
-        public void Wizards()
+        //empty variables to modify
+        public string wizard1Name = "";
+        public string wizard1Powerlvl = "";
+        public string wizard2Name = "";
+        public string wizard2Powerlvl = "";
+        public string Wizards()
         {
-            //stats
-
             //to be able to read the stats. 
             string Wizard1path = "Wizards/Wizard-Luka";
             string Wizard2path = "Wizards/Wizard-Matt";
 
             string[] Wizard1 = File.ReadAllLines(Wizard1path);
             string[] Wizard2 = File.ReadAllLines(Wizard2path);
-
-            string wizard1Name = "";
-            string wizard1Powerlvl = "";
-            string wizard2Name = "";
-            string wizard2Powerlvl = "";
 
             //wizard 1 stats allocated
             foreach (string stat in Wizard1)
@@ -66,11 +64,13 @@ namespace idk
                     }
                 }
             }
+            return wizard1Powerlvl;
+        }
 
+        public void test()
+        {
             Console.WriteLine(wizard1Powerlvl);
-            Console.WriteLine(wizard2Powerlvl);
-
-
         }
     }
+
 }

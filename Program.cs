@@ -8,9 +8,12 @@ class Program
     {
         PreMadeWizards makingWizard = new();
         WizardModel myWizard = new();
-        FightingSystem fightingSystem = new();
+        ReadingWizards readingWizards = new();
+        FightSystem fightSystem = new();
 
-        fightingSystem.Wizards();
+        readingWizards.Wizards();
+        readingWizards.test();
+        // fightSystem.FightPeople();
 
         // makingWizard.CompleteWizards(myWizard);
     }
