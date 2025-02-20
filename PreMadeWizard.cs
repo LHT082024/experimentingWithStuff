@@ -16,8 +16,10 @@ namespace idk
         {
             wizard.Name = "Luka";
             wizard.magic = allmagic.modelOfMagicss[0];
+
             string CompleteWizard = $"Name: {wizard.Name}\n Element: {wizard.magic}\n Powerlvl {wizard.PowerLvl}";
-            string filePath = $"Wizadrds {wizard.Name}.txt";
+            string filePath = $"Wizards/ Wizard {wizard.Name}.txt";
+
             File.WriteAllText(filePath, CompleteWizard);
         }
     }
