@@ -14,11 +14,15 @@ namespace idk
 
         public void CompleteWizards(WizardModel wizard)
         {
+            //making a complete wizard
             wizard.Name = "Luka";
             wizard.magic = allmagic.modelOfMagicss[0];
 
             string CompleteWizard = $"Name: {wizard.Name}\n Element: {wizard.magic}\n Powerlvl {wizard.PowerLvl}";
-            string filePath = $"Wizards/ Wizard {wizard.Name}.txt";
+            string fileName = $" Wizard {wizard.Name}.txt";
+            string folderPath = "Wizards";
+
+            string filePath = Path.Combine(folderPath, fileName);
 
             File.WriteAllText(filePath, CompleteWizard);
         }
