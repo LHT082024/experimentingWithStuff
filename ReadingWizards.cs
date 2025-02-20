@@ -9,11 +9,11 @@ namespace idk
     {
         //empty variables to modify
         public string wizard1Name = "";
-        public string wizard1Powerlvl = "";
+        public int wizard1Powerlvl = 0;
         public string wizard2Name = "";
-        public string wizard2Powerlvl = "";
+        public int wizard2Powerlvl = 0;
 
-        public (string, string, string, string) Wizards()
+        public (string, string, int, int) Wizards()
         {
             //to be able to read the stats. 
             string Wizard1path = "Wizards/Wizard-Luka";
@@ -38,7 +38,7 @@ namespace idk
                             break;
 
                         case "Powerlvl":
-                            wizard1Powerlvl = value;
+                            int.TryParse(value, out wizard1Powerlvl);
                             break;
                     }
                 }
@@ -60,20 +60,33 @@ namespace idk
                             break;
 
                         case "Powerlvl":
-                            wizard2Powerlvl = value;
+                            int.TryParse(value, out wizard2Powerlvl);
                             break;
                     }
+
+
                 }
             }
-            return (wizard1Powerlvl, wizard2Powerlvl, wizard1Name, wizard2Name);
+            return (wizard1Name, wizard2Name, wizard1Powerlvl, wizard2Powerlvl);
         }
 
         public void Test()
         {
-            Console.WriteLine(wizard1Name);
-            Console.WriteLine(wizard2Name);
-            Console.WriteLine(wizard1Powerlvl);
-            Console.WriteLine(wizard2Powerlvl);
+            Console.WriteLine("Hello there brave wizard are you ready to watch people fight?");
+            Console.Write($"the fighters of this round are {wizard1Name} vs {wizard2Name} are you ready?");
+            Console.ReadKey();
+
+            if (wizard1Powerlvl < wizard2Powerlvl)
+            {
+                Console.WriteLine($"AAAAAAAAAAAAAAAAAAAAAAAAAAND {wizard2Name} WIIIIIIIIIINS LIKE A FUCKING CHAMP");
+            }
+            else
+                Console.WriteLine($"WILL YOU LOOK AT THAT {wizard1Name} WIIIIIIIINS BRUTALLY HECK YEAH!");
+
+            // Console.WriteLine(wizard1Name);
+            // Console.WriteLine(wizard2Name);
+            // Console.WriteLine(wizard1Powerlvl);
+            // Console.WriteLine(wizard2Powerlvl);
         }
     }
 }
