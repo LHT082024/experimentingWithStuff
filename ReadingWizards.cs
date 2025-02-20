@@ -72,7 +72,7 @@ namespace idk
 
         public void Test()
         {
-            Console.WriteLine("Hello there brave wizard are you ready to watch people fight?");
+            Console.WriteLine("Hello there audience are you ready to watch wizards fight?");
             Console.Write($"the fighters of this round are {wizard1Name} vs {wizard2Name} are you ready?");
             Console.ReadKey();
 
@@ -82,11 +82,6 @@ namespace idk
             }
             else
                 Console.WriteLine($"WILL YOU LOOK AT THAT {wizard1Name} WIIIIIIIINS BRUTALLY HECK YEAH!");
-
-            // Console.WriteLine(wizard1Name);
-            // Console.WriteLine(wizard2Name);
-            // Console.WriteLine(wizard1Powerlvl);
-            // Console.WriteLine(wizard2Powerlvl);
         }
     }
 }
