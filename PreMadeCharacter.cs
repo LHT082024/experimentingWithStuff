@@ -15,12 +15,12 @@ namespace idk
         public void Intro()
         {
             Console.WriteLine("press E to experience the intro or press R to skip?");
-            ConsoleKeyInfo result = Console.ReadKey();
-            if (result.KeyChar == 'R')
+            ConsoleKeyInfo ClickKey = Console.ReadKey(true);
+            if (ClickKey.Key == ConsoleKey.R)
             {
                 Console.WriteLine("I mean... That's fine I worked really hard on it but ok ;^;");
             }
-            else if (result.KeyChar == 'E')
+            else if (ClickKey.Key == ConsoleKey.E)
             {
                 Console.WriteLine("You are sitting on a plane looking out the window.");
                 Console.ReadKey();
