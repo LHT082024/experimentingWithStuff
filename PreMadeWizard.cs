@@ -6,7 +6,7 @@ using idk.models;
 
 namespace idk
 {
-    public class MakingWizard
+    public class PreMadeWizards
     {
         ModelOfMagic modelOfMagic = new();
         Allmagic allmagic = new();
@@ -16,7 +16,9 @@ namespace idk
         {
             wizard.Name = "Luka";
             wizard.magic = allmagic.modelOfMagicss[0];
-            Console.WriteLine($"your name is: {wizard.Name}\n {wizard.Name}'s magic type is {wizard.magic.Element}\n {wizard.Name} powerlevel {wizard.PowerLvl}");
+            string CompleteWizard = $"Name: {wizard.Name}\n Element: {wizard.magic}\n Powerlvl {wizard.PowerLvl}";
+            string filePath = $"Wizadrds {wizard.Name}.txt";
+            File.WriteAllText(filePath, CompleteWizard);
         }
     }
 }

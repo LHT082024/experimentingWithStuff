@@ -6,7 +6,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        MakingWizard makingWizard = new();
+        PreMadeWizards makingWizard = new();
         WizardModel myWizard = new();
 
         makingWizard.CompleteWizards(myWizard);
