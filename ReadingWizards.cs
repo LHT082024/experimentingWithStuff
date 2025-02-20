@@ -13,7 +13,7 @@ namespace idk
         public string wizard2Name = "";
         public string wizard2Powerlvl = "";
 
-        public (string, string) Wizards()
+        public (string, string, string, string) Wizards()
         {
             //to be able to read the stats. 
             string Wizard1path = "Wizards/Wizard-Luka";
@@ -65,11 +65,13 @@ namespace idk
                     }
                 }
             }
-            return (wizard1Powerlvl, wizard2Powerlvl);
+            return (wizard1Powerlvl, wizard2Powerlvl, wizard1Name, wizard2Name);
         }
 
         public void Test()
         {
+            Console.WriteLine(wizard1Name);
+            Console.WriteLine(wizard2Name);
             Console.WriteLine(wizard1Powerlvl);
             Console.WriteLine(wizard2Powerlvl);
         }
