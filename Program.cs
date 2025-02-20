@@ -8,16 +8,10 @@ class Program
     {
         PreMadeWizards makingWizard = new();
         WizardModel myWizard = new();
+        FightingSystem fightingSystem = new();
 
-        //generating a new wizard
+        // fightingSystem.Wizards();
+
         makingWizard.CompleteWizards(myWizard);
-
-        string filepath = $"Wizards/Wizard-Luka.txt";
-        string[] lines = File.ReadAllLines(filepath);
-
-        foreach (string line in lines)
-        {
-            Console.WriteLine(line);
-        }
     }
 }

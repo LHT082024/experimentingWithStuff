@@ -10,5 +10,10 @@ namespace idk
         public string? Element { get; set; }
         public int PowerlvlAdd { get; set; }
         public string? NatureInspo { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Element}";
+        }
     }
 }

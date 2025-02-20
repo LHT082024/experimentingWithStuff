@@ -15,8 +15,8 @@ namespace idk
         public void CompleteWizards(WizardModel wizard)
         {
             //making a complete wizard
-            wizard.Name = "Matt";
-            wizard.magic = allmagic.modelOfMagicss[1];
+            wizard.Name = "Luka";
+            wizard.magic = allmagic.modelOfMagicss[0];
 
             string CompleteWizard = $"Name: {wizard.Name}\nElement: {wizard.magic}\nPowerlvl {wizard.PowerLvl}";
             string fileName = $" Wizard-{wizard.Name}.txt";

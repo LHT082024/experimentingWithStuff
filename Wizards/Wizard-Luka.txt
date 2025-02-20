@@ -1,3 +1,0 @@
-Name: Luka
- Element: idk.ModelOfMagic
- Powerlvl 15

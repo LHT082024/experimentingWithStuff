@@ -7,8 +7,24 @@ namespace idk
 {
     public class FightingSystem
     {
-        string Wizard1 = "Wizards/Wizard-Luka";
-        string Wizard2 = "Wizards/Wizard-Matt";
+        public void Wizards()
+        {
+            string Wizard1path = "Wizards/Wizard-Luka.txt";
+            string Wizard2path = "Wizards/Wizard-Matt.txt";
+
+            string[] Wizard1 = File.ReadAllLines(Wizard1path);
+            string[] Wizard2 = File.ReadAllLines(Wizard2path);
+
+            foreach (string stat in Wizard1)
+            {
+                Console.WriteLine(stat);
+            }
+            foreach (string stat in Wizard2)
+            {
+                Console.WriteLine(stat);
+            }
+        }
+
 
     }
 }
