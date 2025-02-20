@@ -6,13 +6,13 @@ using idk.models;
 
 namespace idk
 {
-    public class PreMadeWizards
+    public class PreMadeCharacter
     {
         ModelOfMagic modelOfMagic = new();
         Lists Lists = new();
-        WizardModel wizardModel = new();
+        WarriorModel warriorModel = new();
 
-        public void CompleteWizards(WizardModel wizard)
+        public void CompleteWizards(WarriorModel wizard)
         {
             //making a complete wizard
             wizard.Name = "Luka";
