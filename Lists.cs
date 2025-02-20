@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using idk.models;
 
 namespace idk
 {
-    public class Allmagic
+    public class Lists
     {
         public List<ModelOfMagic> modelOfMagicss = new List<ModelOfMagic>(){
             new ModelOfMagic {Element = "Eldritch", NatureInspo = "Water, Lightning, Squid,", PowerlvlAdd = 10},
@@ -16,7 +17,10 @@ namespace idk
             new ModelOfMagic {Element = "EnchantedWeapon", NatureInspo = "Weapons", PowerlvlAdd = 3}
         };
 
-        public
+        public List<ModelOfSpecies> modelOfSpecies = new List<ModelOfSpecies>()
+        {
+
+        };
 
     }
 }

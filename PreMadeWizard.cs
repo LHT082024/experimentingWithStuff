@@ -9,7 +9,7 @@ namespace idk
     public class PreMadeWizards
     {
         ModelOfMagic modelOfMagic = new();
-        Allmagic Lists = new();
+        Lists Lists = new();
         WizardModel wizardModel = new();
 
         public void CompleteWizards(WizardModel wizard)
