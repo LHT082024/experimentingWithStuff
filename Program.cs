@@ -10,8 +10,8 @@ class Program
         WizardModel myWizard = new();
         FightingSystem fightingSystem = new();
 
-        // fightingSystem.Wizards();
+        fightingSystem.Wizards();
 
-        makingWizard.CompleteWizards(myWizard);
+        // makingWizard.CompleteWizards(myWizard);
     }
 }

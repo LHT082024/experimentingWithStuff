@@ -18,8 +18,8 @@ namespace idk
             wizard.Name = "Luka";
             wizard.magic = allmagic.modelOfMagicss[0];
 
-            string CompleteWizard = $"Name: {wizard.Name}\nElement: {wizard.magic}\nPowerlvl {wizard.PowerLvl}";
-            string fileName = $" Wizard-{wizard.Name}.txt";
+            string CompleteWizard = $"Name: {wizard.Name}\nElement: {wizard.magic}\nPowerlvl: {wizard.PowerLvl}";
+            string fileName = $"Wizard-{wizard.Name}";
             string folderPath = "Wizards";
 
             string filePath = Path.Combine(folderPath, fileName);
