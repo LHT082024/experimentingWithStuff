@@ -64,22 +64,10 @@ namespace idk
                     Console.WriteLine("\nYou had one job dude");
                 }
             }
-
-
-
-            //making a complete wizard
-            // wizard.Name = "Luka";
-            // wizard.magic = Lists.modelOfMagicss[0];
-
-            // string CompleteWizard = $"Name: {wizard.Name}\nElement: {wizard.magic}\nPowerlvl: {wizard.PowerLvl}";
-            // string fileName = $"Wizard-{wizard.Name}";
-            // string folderPath = "Wizards";
-
-            // string filePath = Path.Combine(folderPath, fileName);
-
-            // File.WriteAllText(filePath, CompleteWizard);
         }
 
+
+        //where you actually make your character
         public void CreateCharacter()
         {
             bool restart = false;
@@ -87,14 +75,33 @@ namespace idk
             while (!restart)
             {
 
-
                 //choosing a name
-                Console.WriteLine("\nwhat is your name?");
-                string? newName = Console.ReadLine();
-                warriorModel.Name = newName;
+                bool nameIsRight = false;
+                while (!nameIsRight)
+                {
+                    Console.WriteLine("\nwhat is your name? (name cannot contain more then 9 characters)");
+                    string? newName = Console.ReadLine();
 
-                Console.WriteLine($"Your name is: {warriorModel.Name}");
-                Console.ReadKey();
+                    if (string.IsNullOrWhiteSpace(newName))
+                    {
+                        Console.WriteLine("Name cannot be blank");
+                        Console.ReadKey();
+                    }
+                    else if (newName.Length >= 10)
+                    {
+                        Console.WriteLine("name is to long");
+                        Console.ReadKey();
+
+                    }
+                    else
+                    {
+                        warriorModel.Name = newName;
+                        Console.WriteLine($"Your name is: {warriorModel.Name}");
+                        nameIsRight = true;
+                        Console.ReadKey();
+                    }
+                }
+
 
 
                 //choosing species
