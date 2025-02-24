@@ -82,8 +82,9 @@ namespace idk
 
         public void CreateCharacter()
         {
+            bool restart = false;
 
-            while (true)
+            while (!restart)
             {
 
 
@@ -231,9 +232,25 @@ namespace idk
                 Console.WriteLine("\nNow press the E key to save your character and start your adventure.");
                 Console.WriteLine("But if you are not happy with your character press the R key to restart the process of character creation");
 
-                ConsoleKey key = Console.ReadKey(true).Key;
-                if (key == ConsoleKey.E) break;
-                if (key == ConsoleKey.R) Console.Clear();
+                while (true)
+                {
+                    ConsoleKey key = Console.ReadKey(true).Key;
+                    if (key == ConsoleKey.E)
+                    {
+                        restart = true;
+                        break;
+                    }
+                    if (key == ConsoleKey.R)
+                    {
+                        Console.Clear();
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("please press one of the two keys listed above");
+                    }
+                }
+
             }
             string CompleteWizard = $"Name: {warriorModel.Name}\nSpecies: {warriorModel.species}\nMagic type: {warriorModel.magic}\n Health: {warriorModel.Health}\nMana: {warriorModel.Mana}\nPowerlvl {warriorModel.PowerLvl}";
             string fileName = $"Wizard-{warriorModel.Name}";
