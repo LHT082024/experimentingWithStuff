@@ -6,7 +6,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        PreMadeCharacter makingWizard = new();
+        MakingCharacter makingWizard = new();
         WarriorModel myWizard = new();
         ReadingWizards readingWizards = new();
 

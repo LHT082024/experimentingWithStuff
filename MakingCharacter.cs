@@ -7,7 +7,7 @@ using idk.models;
 
 namespace idk
 {
-    public class PreMadeCharacter
+    public class MakingCharacter
     {
         ModelOfMagic modelOfMagic = new();
         ModelOfSpecies modelOfSpecies = new();
@@ -22,7 +22,7 @@ namespace idk
                 ConsoleKeyInfo ClickKey = Console.ReadKey(true);
                 if (ClickKey.Key == ConsoleKey.R)
                 {
-                    Console.WriteLine("I mean... That's fine I worked really hard on it but ok ;^;");
+                    Console.WriteLine("\nI mean... That's fine I worked really hard on it but ok ;^;");
                     break;
                 }
                 else if (ClickKey.Key == ConsoleKey.E)
