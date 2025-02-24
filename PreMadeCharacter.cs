@@ -85,12 +85,12 @@ namespace idk
             string? newName = Console.ReadLine().ToLower();
             warriorModel.Name = newName;
 
-            Console.WriteLine($"Your name is{warriorModel.Name}");
+            Console.WriteLine($"Your name is: {warriorModel.Name}");
             Console.ReadKey();
 
 
             //choosing species
-            Console.WriteLine("Type in one of the listed species");
+            Console.WriteLine("\nType in one of the listed species\n");
             Console.WriteLine("Eldritch creature    Demonic Ancestor");
             Console.WriteLine("Angelic Ancestor         Human       ");
 
