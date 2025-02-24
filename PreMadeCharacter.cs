@@ -106,13 +106,12 @@ namespace idk
 
                 if (species != null)
                 {
+                    warriorModel.species = species;
                     breakflag = true;
 
-
-
-                    switch (species)
+                    switch (warriorModel.species.SpeciesName)
                     {
-                        case ModelOfSpecies.EldritchCreature:
+                        case "eldritch creature":
                             Console.WriteLine("Beautiful, Eldritch creatures are truly amazing and I love you");
                             Console.ReadKey();
                             break;
