@@ -14,5 +14,6 @@ class Program
         // readingWizards.Test();
 
         makingWizard.Intro();
+        makingWizard.CreateCharacter();
     }
 }

@@ -95,11 +95,13 @@ namespace idk
             Console.WriteLine("Angelic Ancestor         Human       ");
 
 
-            bool breakflag = true;
+            bool breakflag = false;
             while (!breakflag)
             {
                 string? species = Console.ReadLine().ToLower();
                 warriorModel.Species = species;
+
+                breakflag = true;
 
 
                 switch (species)
