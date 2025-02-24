@@ -103,14 +103,14 @@ namespace idk
                 }
 
                 //choosing species
+                //selecting species. While the bool is false you are stuck in a while  loop. The Boolien becomes true
+                //when species have aquired a value. While the default switches the boolean back to false making sure 
+                //that the user is stuck in the while loop until they have selected one of the actual species
                 Console.WriteLine("\nType in one of the listed species\n");
                 Console.WriteLine("Eldritch creature    Demonic Ancestor");
                 Console.WriteLine("Angelic Ancestor         Human       ");
 
 
-                //selecting species. While the bool is false you are stuck in a while  loop. The Boolien becomes true
-                //when species have aquired a value. While the default switches the boolean back to false making sure 
-                //that the user is stuck in the while loop until they have selected one of the actual species
                 bool breakflag = false;
                 while (!breakflag)
                 {
