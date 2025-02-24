@@ -11,7 +11,7 @@ namespace idk.models
         public string? Name { get; set; }
         public ModelOfSpecies species { get; set; }
         public ModelOfMagic? magic { get; set; }
-        public int PowerLvl => magic.PowerlvlAdd + 5;
+        public int PowerLvl { get; set; }
         public int Mana { get; set; }
         public int Health { get; set; }
 

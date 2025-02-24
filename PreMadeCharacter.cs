@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using idk.models;
 
@@ -191,8 +192,14 @@ namespace idk
                 break;
             }
 
-
+            //calculating powerlevel.
+            warriorModel.PowerLvl
+            warriorModel.Health
+            warriorModel.Mana
 
         }
+
+
+
     }
 }
