@@ -130,20 +130,24 @@ namespace idk
                             Console.WriteLine("Seriously you had the decision between a creature beoynd reality, a demon and an angel and you choose a human??!\nYou must be fun at parties...");
                             Console.ReadKey();
                             break;
-
-                        default:
-                            Console.WriteLine("You need to type in one of the species dum, dum remember spelling is important");
-                            breakflag = false;
-                            break;
                     }
+                }
+                else
+                {
+                    Console.WriteLine("You need to type in one of the species dum, dum remember spelling is important");
+                    breakflag = false;
                 }
             }
 
-            //choosing magic same system as the one above with breakflag.
-            Console.WriteLine("And now for the exciting part choosing magic. Remember this is an important decision that will decide 3 out of your 4 spells");
+            //choosing magic flavour text
+            Console.WriteLine("\nAnd now for the exciting part choosing magic. Remember this is an important decision that will decide 3 out of your 4 spells");
+            Console.ReadKey();
             Console.WriteLine("The magic types");
+            Console.ReadKey();
             Console.WriteLine("Eldritch\nDarkness\nHoly\nFire\nIce");
 
+            //choosing magic code same system as the one above.
+            breakflag = false;
             while (!breakflag)
             {
                 string? input = Console.ReadLine().ToLower();
@@ -157,30 +161,34 @@ namespace idk
                     {
                         case "eldritch":
                             Console.WriteLine("Lets go Eldritch you know it's the most powerful magic. As long as...You know you don't go insane and end yourself");
+                            Console.ReadKey();
                             break;
 
                         case "darkness":
                             Console.WriteLine("The magic of the edgelords remember to listen to linkin park or something while you go on this adventure. I think it will fit you");
+                            Console.ReadKey();
                             break;
 
                         case "holy":
                             Console.WriteLine("Ah you still have hope in life dont you. \nBet it's nice :)");
+                            Console.ReadKey();
                             break;
 
                         case "fire":
                             Console.WriteLine("You yell allot don't you?");
+                            Console.ReadKey();
                             break;
 
                         case "ice":
-                            Console.WriteLine("I bet you are super cool, ha get it coool, I'm so funny (please like me :(, )");
-                            break;
-
-                        default:
-                            Console.WriteLine("Spelling is important try again.");
-                            breakflag = false;
+                            Console.WriteLine("I bet you are super cool, ha get it coool, I'm so funny (please like me :( )");
+                            Console.ReadKey();
                             break;
                     }
                 }
+                else
+                    Console.WriteLine("Spelling is important try again.");
+                breakflag = false;
+                break;
             }
 
 

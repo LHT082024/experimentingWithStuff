@@ -9,12 +9,12 @@ namespace idk
     public class Lists
     {
         public List<ModelOfMagic> modelOfMagicss = new List<ModelOfMagic>(){
-            new ModelOfMagic {Element = "Eldritch", NatureInspo = "Water, Lightning, Squid,", PowerlvlAdd = 10},
-            new ModelOfMagic {Element = "Darkness", NatureInspo = "Ice, Shadow, Demon", PowerlvlAdd = 9},
-            new ModelOfMagic {Element = "Holy", NatureInspo = "Air, Light, Angel", PowerlvlAdd = 9},
-            new ModelOfMagic {Element = "Fire", NatureInspo = "Fire,  Dragon", PowerlvlAdd = 5},
-            new ModelOfMagic {Element = "Ice", NatureInspo = "Frost, Giants", PowerlvlAdd = 5},
-            new ModelOfMagic {Element = "EnchantedWeapon", NatureInspo = "Weapons", PowerlvlAdd = 3}
+            new ModelOfMagic {Element = "eldritch", NatureInspo = "Water, Lightning, Squid,", PowerlvlAdd = 10},
+            new ModelOfMagic {Element = "darkness", NatureInspo = "Ice, Shadow, Demon", PowerlvlAdd = 9},
+            new ModelOfMagic {Element = "holy", NatureInspo = "Air, Light, Angel", PowerlvlAdd = 9},
+            new ModelOfMagic {Element = "fire", NatureInspo = "Fire,  Dragon", PowerlvlAdd = 5},
+            new ModelOfMagic {Element = "ice", NatureInspo = "Frost, Giants", PowerlvlAdd = 5},
+            new ModelOfMagic {Element = "enchantedWeapon", NatureInspo = "Weapons", PowerlvlAdd = 3}
         };
 
         public List<ModelOfSpecies> modelOfSpecies = new List<ModelOfSpecies>()
@@ -25,6 +25,5 @@ namespace idk
             new ModelOfSpecies {SpeciesName = "human", SpeciesHealth = 3, SpeciesMana = 3, SpeciesSpell= "Magic Grenade"},
             new ModelOfSpecies {SpeciesName = "elf", SpeciesHealth = 4, SpeciesMana = 4, SpeciesSpell ="Natures Law"}
         };
-
     }
 }
