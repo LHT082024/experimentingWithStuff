@@ -93,34 +93,47 @@ namespace idk
             Console.WriteLine("Type in one of the listed species");
             Console.WriteLine("Eldritch creature    Demonic Ancestor");
             Console.WriteLine("Angelic Ancestor         Human       ");
-            string? species = Console.ReadLine().ToLower();
-            warriorModel.Species = species;
 
-            switch (species)
+
+            bool breakflag = true;
+            while (!breakflag)
             {
-                case "eldritch creature":
-                    Console.WriteLine("Beautiful Eldritch creatures are truly are an amazing creature I love you");
-                    Console.ReadKey();
-                    break;
+                string? species = Console.ReadLine().ToLower();
+                warriorModel.Species = species;
 
-                case "demonic ancestor":
-                    Console.WriteLine("Look on the bright side as a Demonic Ancestor you will never get cold on the bad side you will defintly end up in hell");
-                    Console.ReadKey();
-                    break;
 
-                case "angelic ancestor":
-                    Console.WriteLine("I am soooooooo jelous of your wings I also want angel wings, why dont I have angel wings :()");
-                    Console.ReadKey();
-                    break;
+                switch (species)
+                {
+                    case "eldritch creature":
+                        Console.WriteLine("Beautiful, Eldritch creatures are truly amazing and I love you");
+                        Console.ReadKey();
+                        break;
 
-                case "human":
-                    Console.WriteLine("Seriously you had the decision between a creature beoynd reality, a demon and an angel and you choose a human??!\nYou must be fun at parties...");
-                    Console.ReadKey();
-                    break;
+                    case "demonic ancestor":
+                        Console.WriteLine("Look on the bright side as a Demonic Ancestor you will never get cold on the bad side you will defintly end up in hell");
+                        Console.ReadKey();
+                        break;
+
+                    case "angelic ancestor":
+                        Console.WriteLine("I am soooooooo jealous of your wings I also want angel wings, why dont I have angel wings :()");
+                        Console.ReadKey();
+                        break;
+
+                    case "human":
+                        Console.WriteLine("Seriously you had the decision between a creature beoynd reality, a demon and an angel and you choose a human??!\nYou must be fun at parties...");
+                        Console.ReadKey();
+                        break;
+
+                    default:
+                        Console.WriteLine("You need to type in one of the species dum, dum remember spelling is important");
+                        breakflag = false;
+                        break;
+                }
             }
 
             //choosing magic 
             Console.WriteLine("And now for the exciting part choosing magic. Remember this is an important decision that will decide 3 out of your 4 spells");
+            Console.WriteLine("");
 
 
 
