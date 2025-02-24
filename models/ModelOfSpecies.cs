@@ -13,5 +13,10 @@ namespace idk.models
 
         public int PowerlvlAdd { get; set; }
         public string? SpeciesSpell { get; set; }
+
+        public override string ToString()
+        {
+            return $"{SpeciesName}";
+        }
     }
 }

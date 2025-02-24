@@ -84,7 +84,7 @@ namespace idk
         {
             //choosing a name
             Console.WriteLine("\nwhat is your name?");
-            string? newName = Console.ReadLine().ToLower();
+            string? newName = Console.ReadLine();
             warriorModel.Name = newName;
 
             Console.WriteLine($"Your name is: {warriorModel.Name}");
@@ -201,6 +201,7 @@ namespace idk
             Console.WriteLine("Your character is");
             Console.WriteLine($"\nCharacter Name: {warriorModel.Name}");
             Console.WriteLine($"\nYou are a: {warriorModel.species}");
+            Console.WriteLine($"\nYour: {warriorModel.magic}");
             Console.WriteLine($"\nYour Health is: {warriorModel.Health}");
             Console.WriteLine($"\nYour Mana is: {warriorModel.Mana}");
             Console.WriteLine($"\nLastly your power lvl is: {warriorModel.PowerLvl}");
