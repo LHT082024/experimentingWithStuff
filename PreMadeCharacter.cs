@@ -114,6 +114,7 @@ namespace idk
                     switch (warriorModel.species.SpeciesName)
                     {
                         case "eldritch creature":
+                            warriorModel.PowerLvl = lists.modelOfSpecies[0].PowerlvlAdd;
                             Console.WriteLine("Beautiful, Eldritch creatures are truly amazing and I love you");
                             Console.ReadKey();
                             break;
@@ -162,6 +163,7 @@ namespace idk
                     switch (warriorModel.magic.Element)
                     {
                         case "eldritch":
+                            warriorModel.PowerLvl += lists.modelOfMagicss[0].PowerlvlAdd;
                             Console.WriteLine("Lets go Eldritch you know it's the most powerful magic. As long as...You know you don't go insane and end yourself");
                             Console.ReadKey();
                             break;
@@ -194,14 +196,14 @@ namespace idk
             }
 
             //calculating powerlevel.
-            warriorModel.PowerLvl = modelOfMagic.PowerlvlAdd + modelOfSpecies.PowerlvlAdd;
-            warriorModel.Health = modelOfSpecies.SpeciesHealth;
-            warriorModel.Mana = modelOfSpecies.SpeciesMana;
+            // warriorModel.PowerLvl = modelOfMagic.PowerlvlAdd + modelOfSpecies.PowerlvlAdd;
+            // warriorModel.Health = modelOfSpecies.SpeciesHealth;
+            // warriorModel.Mana = modelOfSpecies.SpeciesMana;
 
             Console.WriteLine("Your character is");
             Console.WriteLine($"\nCharacter Name: {warriorModel.Name}");
             Console.WriteLine($"\nYou are a: {warriorModel.species}");
-            Console.WriteLine($"\nYour: {warriorModel.magic}");
+            Console.WriteLine($"\nYour magic type is: {warriorModel.magic}");
             Console.WriteLine($"\nYour Health is: {warriorModel.Health}");
             Console.WriteLine($"\nYour Mana is: {warriorModel.Mana}");
             Console.WriteLine($"\nLastly your power lvl is: {warriorModel.PowerLvl}");
