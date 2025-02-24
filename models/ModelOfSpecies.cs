@@ -11,6 +11,5 @@ namespace idk.models
         public int SpeciesHealth { get; set; }
         public int SpeciesMana { get; set; }
         public string? SpeciesSpell { get; set; }
-
     }
 }
