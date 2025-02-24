@@ -95,12 +95,14 @@ namespace idk
             Console.WriteLine("Angelic Ancestor         Human       ");
 
 
+            //selecting species. While the bool is false you are stuck in a while  loop. The Boolien becomes true
+            //when species have aquired a value. While the default switches the boolean back to false making sure 
+            //that the user is stuck in the while loop until they have selected one of the actual species
             bool breakflag = false;
             while (!breakflag)
             {
                 string? species = Console.ReadLine().ToLower();
                 warriorModel.Species = species;
-
                 breakflag = true;
 
 
