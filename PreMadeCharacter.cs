@@ -115,6 +115,8 @@ namespace idk
                     {
                         case "eldritch creature":
                             warriorModel.PowerLvl = lists.modelOfSpecies[0].PowerlvlAdd;
+                            warriorModel.Health = lists.modelOfSpecies[0].SpeciesHealth;
+                            warriorModel.Mana = lists.modelOfSpecies[0].SpeciesMana;
                             Console.WriteLine("Beautiful, Eldritch creatures are truly amazing and I love you");
                             Console.ReadKey();
                             break;
