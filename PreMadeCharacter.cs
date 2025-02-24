@@ -75,7 +75,7 @@ namespace idk
             while (!restart)
             {
 
-                //choosing a name
+                //choosing a name have another while loop to make sure name is not blank or too long
                 bool nameIsRight = false;
                 while (!nameIsRight)
                 {
@@ -101,8 +101,6 @@ namespace idk
                         Console.ReadKey();
                     }
                 }
-
-
 
                 //choosing species
                 Console.WriteLine("\nType in one of the listed species\n");
