@@ -218,17 +218,17 @@ namespace idk
                 Console.ReadKey();
                 Console.WriteLine($"\nCharacter Name: {warriorModel.Name}");
                 Console.ReadKey();
-                Console.WriteLine($"\nYou are a: {warriorModel.species}");
+                Console.WriteLine($"You are a: {warriorModel.species}");
                 Console.ReadKey();
-                Console.WriteLine($"\nYour magic type is: {warriorModel.magic}");
+                Console.WriteLine($"Your magic type is: {warriorModel.magic}");
                 Console.ReadKey();
-                Console.WriteLine($"\nYour Health is: {warriorModel.Health}");
+                Console.WriteLine($"Your Health is: {warriorModel.Health}");
                 Console.ReadKey();
-                Console.WriteLine($"\nYour Mana is: {warriorModel.Mana}");
+                Console.WriteLine($"Your Mana is: {warriorModel.Mana}");
                 Console.ReadKey();
-                Console.WriteLine($"\nLastly your power lvl is: {warriorModel.PowerLvl}");
+                Console.WriteLine($"Lastly your power lvl is: {warriorModel.PowerLvl}");
                 Console.ReadKey();
-                Console.WriteLine("Now press the E key to save your character and start your adventure.");
+                Console.WriteLine("\nNow press the E key to save your character and start your adventure.");
                 Console.WriteLine("But if you are not happy with your character press the R key to restart the process of character creation");
 
                 ConsoleKey key = Console.ReadKey(true).Key;
