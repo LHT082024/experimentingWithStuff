@@ -10,6 +10,7 @@ namespace idk
     public class PreMadeCharacter
     {
         ModelOfMagic modelOfMagic = new();
+        ModelOfSpecies modelOfSpecies = new();
         Lists lists = new();
         WarriorModel warriorModel = new();
 
@@ -193,13 +194,16 @@ namespace idk
             }
 
             //calculating powerlevel.
-            warriorModel.PowerLvl
-            warriorModel.Health
-            warriorModel.Mana
+            warriorModel.PowerLvl = modelOfMagic.PowerlvlAdd + modelOfSpecies.PowerlvlAdd;
+            warriorModel.Health = modelOfSpecies.SpeciesHealth;
+            warriorModel.Mana = modelOfSpecies.SpeciesMana;
 
+            Console.WriteLine("Your character is");
+            Console.WriteLine($"\nCharacter Name: {warriorModel.Name}");
+            Console.WriteLine($"\nYou are a: {warriorModel.species}");
+            Console.WriteLine($"\nYour Health is: {warriorModel.Health}");
+            Console.WriteLine($"\nYour Mana is: {warriorModel.Mana}");
+            Console.WriteLine($"\nLastly your power lvl is: {warriorModel.PowerLvl}");
         }
-
-
-
     }
 }

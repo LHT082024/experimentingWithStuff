@@ -19,11 +19,11 @@ namespace idk
 
         public List<ModelOfSpecies> modelOfSpecies = new List<ModelOfSpecies>()
         {
-            new ModelOfSpecies {SpeciesName = "eldritch creature", SpeciesHealth = 10, SpeciesMana = 10, SpeciesSpell = "Eldritch Tendrils"},
-            new ModelOfSpecies {SpeciesName = "demonic ancestor", SpeciesHealth = 5, SpeciesMana = 5, SpeciesSpell= "Lucifer's Wings"},
-            new ModelOfSpecies {SpeciesName = "angelic ancestor", SpeciesHealth = 5, SpeciesMana = 5, SpeciesSpell= "Angelic Judgment"},
-            new ModelOfSpecies {SpeciesName = "human", SpeciesHealth = 3, SpeciesMana = 3, SpeciesSpell= "Magic Grenade"},
-            new ModelOfSpecies {SpeciesName = "elf", SpeciesHealth = 4, SpeciesMana = 4, SpeciesSpell ="Natures Law"}
+            new ModelOfSpecies {SpeciesName = "eldritch creature", SpeciesHealth = 10, SpeciesMana = 10, PowerlvlAdd = 10, SpeciesSpell = "Eldritch Tendrils"},
+            new ModelOfSpecies {SpeciesName = "demonic ancestor", SpeciesHealth = 5, SpeciesMana = 5, PowerlvlAdd = 5, SpeciesSpell= "Lucifer's Wings"},
+            new ModelOfSpecies {SpeciesName = "angelic ancestor", SpeciesHealth = 5, SpeciesMana = 5, PowerlvlAdd = 5, SpeciesSpell= "Angelic Judgment"},
+            new ModelOfSpecies {SpeciesName = "human", SpeciesHealth = 3, SpeciesMana = 3, PowerlvlAdd = 3, SpeciesSpell= "Magic Grenade"},
+            new ModelOfSpecies {SpeciesName = "elf", SpeciesHealth = 4, SpeciesMana = 4, PowerlvlAdd = 4, SpeciesSpell ="Natures Law"}
         };
     }
 }

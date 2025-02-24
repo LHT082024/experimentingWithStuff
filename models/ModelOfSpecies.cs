@@ -10,6 +10,8 @@ namespace idk.models
         public string? SpeciesName { get; set; }
         public int SpeciesHealth { get; set; }
         public int SpeciesMana { get; set; }
+
+        public int PowerlvlAdd { get; set; }
         public string? SpeciesSpell { get; set; }
     }
 }

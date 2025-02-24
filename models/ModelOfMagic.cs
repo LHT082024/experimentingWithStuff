@@ -17,7 +17,9 @@ namespace idk
         //make sure its saved as string
         public override string ToString()
         {
-            return $"{Element}";
+            return $"{Element}, {Species}";
         }
+
+
     }
 }
