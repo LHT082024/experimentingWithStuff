@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace idk.models
 {
-    public class Attacks
+    public class AttacksModel
     {
         public string? Name { get; set; }
         public string? Description { get; set; }
