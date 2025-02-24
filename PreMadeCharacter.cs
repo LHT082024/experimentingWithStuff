@@ -9,7 +9,7 @@ namespace idk
     public class PreMadeCharacter
     {
         ModelOfMagic modelOfMagic = new();
-        Lists Lists = new();
+        Lists lists = new();
         WarriorModel warriorModel = new();
 
         public void Intro()
@@ -81,7 +81,7 @@ namespace idk
         public void CreateCharacter()
         {
             //choosing a name
-            Console.WriteLine("what is your name?");
+            Console.WriteLine("\nwhat is your name?");
             string? newName = Console.ReadLine().ToLower();
             warriorModel.Name = newName;
 
@@ -101,46 +101,60 @@ namespace idk
             bool breakflag = false;
             while (!breakflag)
             {
-                string? species = Console.ReadLine().ToLower();
-                warriorModel.Species = species;
-                breakflag = true;
+                string? input = Console.ReadLine().ToLower();
+                ModelOfSpecies? species = lists.modelOfSpecies.FirstOrDefault(s => s.SpeciesName.ToLower() == input);
 
-
-                switch (species)
+                if (species != null)
                 {
-                    case "eldritch creature":
-                        Console.WriteLine("Beautiful, Eldritch creatures are truly amazing and I love you");
-                        Console.ReadKey();
-                        break;
+                    breakflag = true;
 
-                    case "demonic ancestor":
-                        Console.WriteLine("Look on the bright side as a Demonic Ancestor you will never get cold on the bad side you will defintly end up in hell");
-                        Console.ReadKey();
-                        break;
 
-                    case "angelic ancestor":
-                        Console.WriteLine("I am soooooooo jealous of your wings I also want angel wings, why dont I have angel wings :()");
-                        Console.ReadKey();
-                        break;
 
-                    case "human":
-                        Console.WriteLine("Seriously you had the decision between a creature beoynd reality, a demon and an angel and you choose a human??!\nYou must be fun at parties...");
-                        Console.ReadKey();
-                        break;
+                    switch (species)
+                    {
+                        case ModelOfSpecies.EldritchCreature:
+                            Console.WriteLine("Beautiful, Eldritch creatures are truly amazing and I love you");
+                            Console.ReadKey();
+                            break;
 
-                    default:
-                        Console.WriteLine("You need to type in one of the species dum, dum remember spelling is important");
-                        breakflag = false;
-                        break;
+                        case "demonic ancestor":
+                            Console.WriteLine("Look on the bright side as a Demonic Ancestor you will never get cold on the bad side you will defintly end up in hell");
+                            Console.ReadKey();
+                            break;
+
+                        case "angelic ancestor":
+                            Console.WriteLine("I am soooooooo jealous of your wings I also want angel wings, why dont I have angel wings :()");
+                            Console.ReadKey();
+                            break;
+
+                        case "human":
+                            Console.WriteLine("Seriously you had the decision between a creature beoynd reality, a demon and an angel and you choose a human??!\nYou must be fun at parties...");
+                            Console.ReadKey();
+                            break;
+
+                        default:
+                            Console.WriteLine("You need to type in one of the species dum, dum remember spelling is important");
+                            breakflag = false;
+                            break;
+                    }
                 }
             }
 
-            //choosing magic 
-            Console.WriteLine("And now for the exciting part choosing magic. Remember this is an important decision that will decide 3 out of your 4 spells");
-            Console.WriteLine("");
+            //choosing magic same system as the one above with breakflag.
+            Console.WriteLine("\nAnd now for the exciting part choosing magic. Remember this is an important decision that will decide 3 out of your 4 spells");
+
+            while (!breakflag)
+            {
+                string? magics = Console.ReadLine().ToLower();
+
+                switch
 
 
 
+            }
+
+
+
+            }
         }
     }
-}

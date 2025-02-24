@@ -9,7 +9,7 @@ namespace idk.models
     public class WarriorModel
     {
         public string? Name { get; set; }
-        public string? Species { get; set; }
+        public ModelOfSpecies species { get; set; }
         public ModelOfMagic? magic { get; set; }
         public int PowerLvl => magic.PowerlvlAdd + 5;
         public int Mana { get; set; }
