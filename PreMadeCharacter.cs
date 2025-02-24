@@ -209,13 +209,30 @@ namespace idk
                 breakflag = false;
                 break;
             }
-            Console.WriteLine("Your character is");
+            Console.WriteLine("Your character summary");
+            Console.ReadKey();
             Console.WriteLine($"\nCharacter Name: {warriorModel.Name}");
+            Console.ReadKey();
             Console.WriteLine($"\nYou are a: {warriorModel.species}");
+            Console.ReadKey();
             Console.WriteLine($"\nYour magic type is: {warriorModel.magic}");
+            Console.ReadKey();
             Console.WriteLine($"\nYour Health is: {warriorModel.Health}");
+            Console.ReadKey();
             Console.WriteLine($"\nYour Mana is: {warriorModel.Mana}");
+            Console.ReadKey();
             Console.WriteLine($"\nLastly your power lvl is: {warriorModel.PowerLvl}");
+            Console.ReadKey();
+            Console.WriteLine("Press any key to save your character and start your adventure");
+            Console.ReadKey();
+
+            string CompleteWizard = $"Name: {warriorModel.Name}\nSpecies: {warriorModel.species}\nMagic type: {warriorModel.magic}\n Health: {warriorModel.Health}\nMana: {warriorModel.Mana}\nPowerlvl {warriorModel.PowerLvl}";
+            string fileName = $"Wizard-{warriorModel.Name}";
+            string folderPath = "Wizards";
+
+            string filePath = Path.Combine(folderPath, fileName);
+
+            File.WriteAllText(filePath, CompleteWizard);
         }
     }
 }
