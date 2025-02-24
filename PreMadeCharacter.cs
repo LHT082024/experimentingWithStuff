@@ -122,16 +122,25 @@ namespace idk
                             break;
 
                         case "demonic ancestor":
+                            warriorModel.PowerLvl = lists.modelOfSpecies[1].PowerlvlAdd;
+                            warriorModel.Health = lists.modelOfSpecies[1].SpeciesHealth;
+                            warriorModel.Mana = lists.modelOfSpecies[1].SpeciesMana;
                             Console.WriteLine("Look on the bright side as a Demonic Ancestor, you will never get cold. On the bad side you will defintly end up in hell");
                             Console.ReadKey();
                             break;
 
                         case "angelic ancestor":
+                            warriorModel.PowerLvl = lists.modelOfSpecies[2].PowerlvlAdd;
+                            warriorModel.Health = lists.modelOfSpecies[2].SpeciesHealth;
+                            warriorModel.Mana = lists.modelOfSpecies[2].SpeciesMana;
                             Console.WriteLine("I am soooooooo jealous of your wings\n I also want angel wings\n why dont I have angel wings :()");
                             Console.ReadKey();
                             break;
 
                         case "human":
+                            warriorModel.PowerLvl = lists.modelOfSpecies[3].PowerlvlAdd;
+                            warriorModel.Health = lists.modelOfSpecies[3].SpeciesHealth;
+                            warriorModel.Mana = lists.modelOfSpecies[3].SpeciesMana;
                             Console.WriteLine("Seriously you had the decision between a creature beoynd reality, a demon and an angel and you choose a human??!\nYou must be fun at parties...");
                             Console.ReadKey();
                             break;
@@ -171,21 +180,25 @@ namespace idk
                             break;
 
                         case "darkness":
+                            warriorModel.PowerLvl += lists.modelOfMagicss[1].PowerlvlAdd;
                             Console.WriteLine("The magic of the edgelords remember to listen to linkin park or something while you go on this adventure. I think it will fit you");
                             Console.ReadKey();
                             break;
 
                         case "holy":
+                            warriorModel.PowerLvl += lists.modelOfMagicss[2].PowerlvlAdd;
                             Console.WriteLine("Ah you still have hope in life dont you. \nBet it's nice :)");
                             Console.ReadKey();
                             break;
 
                         case "fire":
+                            warriorModel.PowerLvl += lists.modelOfMagicss[3].PowerlvlAdd;
                             Console.WriteLine("You yell allot don't you?");
                             Console.ReadKey();
                             break;
 
                         case "ice":
+                            warriorModel.PowerLvl += lists.modelOfMagicss[4].PowerlvlAdd;
                             Console.WriteLine("I bet you are super cool, ha get it coool, I'm so funny (please like me :( )");
                             Console.ReadKey();
                             break;
@@ -196,12 +209,6 @@ namespace idk
                 breakflag = false;
                 break;
             }
-
-            //calculating powerlevel.
-            // warriorModel.PowerLvl = modelOfMagic.PowerlvlAdd + modelOfSpecies.PowerlvlAdd;
-            // warriorModel.Health = modelOfSpecies.SpeciesHealth;
-            // warriorModel.Mana = modelOfSpecies.SpeciesMana;
-
             Console.WriteLine("Your character is");
             Console.WriteLine($"\nCharacter Name: {warriorModel.Name}");
             Console.WriteLine($"\nYou are a: {warriorModel.species}");
