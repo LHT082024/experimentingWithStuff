@@ -82,150 +82,159 @@ namespace idk
 
         public void CreateCharacter()
         {
-            //choosing a name
-            Console.WriteLine("\nwhat is your name?");
-            string? newName = Console.ReadLine();
-            warriorModel.Name = newName;
 
-            Console.WriteLine($"Your name is: {warriorModel.Name}");
-            Console.ReadKey();
-
-
-            //choosing species
-            Console.WriteLine("\nType in one of the listed species\n");
-            Console.WriteLine("Eldritch creature    Demonic Ancestor");
-            Console.WriteLine("Angelic Ancestor         Human       ");
-
-
-            //selecting species. While the bool is false you are stuck in a while  loop. The Boolien becomes true
-            //when species have aquired a value. While the default switches the boolean back to false making sure 
-            //that the user is stuck in the while loop until they have selected one of the actual species
-            bool breakflag = false;
-            while (!breakflag)
+            while (true)
             {
-                string? input = Console.ReadLine().ToLower();
-                ModelOfSpecies? species = lists.modelOfSpecies.FirstOrDefault(s => s.SpeciesName.ToLower() == input);
 
-                if (species != null)
+
+                //choosing a name
+                Console.WriteLine("\nwhat is your name?");
+                string? newName = Console.ReadLine();
+                warriorModel.Name = newName;
+
+                Console.WriteLine($"Your name is: {warriorModel.Name}");
+                Console.ReadKey();
+
+
+                //choosing species
+                Console.WriteLine("\nType in one of the listed species\n");
+                Console.WriteLine("Eldritch creature    Demonic Ancestor");
+                Console.WriteLine("Angelic Ancestor         Human       ");
+
+
+                //selecting species. While the bool is false you are stuck in a while  loop. The Boolien becomes true
+                //when species have aquired a value. While the default switches the boolean back to false making sure 
+                //that the user is stuck in the while loop until they have selected one of the actual species
+                bool breakflag = false;
+                while (!breakflag)
                 {
-                    warriorModel.species = species;
-                    breakflag = true;
+                    string? input = Console.ReadLine().ToLower();
+                    ModelOfSpecies? species = lists.modelOfSpecies.FirstOrDefault(s => s.SpeciesName.ToLower() == input);
 
-                    switch (warriorModel.species.SpeciesName)
+                    if (species != null)
                     {
-                        case "eldritch creature":
-                            warriorModel.PowerLvl = lists.modelOfSpecies[0].PowerlvlAdd;
-                            warriorModel.Health = lists.modelOfSpecies[0].SpeciesHealth;
-                            warriorModel.Mana = lists.modelOfSpecies[0].SpeciesMana;
-                            Console.WriteLine("Beautiful, Eldritch creatures are truly amazing and I love you");
-                            Console.ReadKey();
-                            break;
+                        warriorModel.species = species;
+                        breakflag = true;
 
-                        case "demonic ancestor":
-                            warriorModel.PowerLvl = lists.modelOfSpecies[1].PowerlvlAdd;
-                            warriorModel.Health = lists.modelOfSpecies[1].SpeciesHealth;
-                            warriorModel.Mana = lists.modelOfSpecies[1].SpeciesMana;
-                            Console.WriteLine("Look on the bright side as a Demonic Ancestor, you will never get cold. On the bad side you will defintly end up in hell");
-                            Console.ReadKey();
-                            break;
+                        switch (warriorModel.species.SpeciesName)
+                        {
+                            case "eldritch creature":
+                                warriorModel.PowerLvl = lists.modelOfSpecies[0].PowerlvlAdd;
+                                warriorModel.Health = lists.modelOfSpecies[0].SpeciesHealth;
+                                warriorModel.Mana = lists.modelOfSpecies[0].SpeciesMana;
+                                Console.WriteLine("Beautiful, Eldritch creatures are truly amazing and I love you");
+                                Console.ReadKey();
+                                break;
 
-                        case "angelic ancestor":
-                            warriorModel.PowerLvl = lists.modelOfSpecies[2].PowerlvlAdd;
-                            warriorModel.Health = lists.modelOfSpecies[2].SpeciesHealth;
-                            warriorModel.Mana = lists.modelOfSpecies[2].SpeciesMana;
-                            Console.WriteLine("I am soooooooo jealous of your wings\n I also want angel wings\n why dont I have angel wings :()");
-                            Console.ReadKey();
-                            break;
+                            case "demonic ancestor":
+                                warriorModel.PowerLvl = lists.modelOfSpecies[1].PowerlvlAdd;
+                                warriorModel.Health = lists.modelOfSpecies[1].SpeciesHealth;
+                                warriorModel.Mana = lists.modelOfSpecies[1].SpeciesMana;
+                                Console.WriteLine("Look on the bright side as a Demonic Ancestor, you will never get cold. On the bad side you will defintly end up in hell");
+                                Console.ReadKey();
+                                break;
 
-                        case "human":
-                            warriorModel.PowerLvl = lists.modelOfSpecies[3].PowerlvlAdd;
-                            warriorModel.Health = lists.modelOfSpecies[3].SpeciesHealth;
-                            warriorModel.Mana = lists.modelOfSpecies[3].SpeciesMana;
-                            Console.WriteLine("Seriously you had the decision between a creature beoynd reality, a demon and an angel and you choose a human??!\nYou must be fun at parties...");
-                            Console.ReadKey();
-                            break;
+                            case "angelic ancestor":
+                                warriorModel.PowerLvl = lists.modelOfSpecies[2].PowerlvlAdd;
+                                warriorModel.Health = lists.modelOfSpecies[2].SpeciesHealth;
+                                warriorModel.Mana = lists.modelOfSpecies[2].SpeciesMana;
+                                Console.WriteLine("I am soooooooo jealous of your wings\n I also want angel wings\n why dont I have angel wings :()");
+                                Console.ReadKey();
+                                break;
+
+                            case "human":
+                                warriorModel.PowerLvl = lists.modelOfSpecies[3].PowerlvlAdd;
+                                warriorModel.Health = lists.modelOfSpecies[3].SpeciesHealth;
+                                warriorModel.Mana = lists.modelOfSpecies[3].SpeciesMana;
+                                Console.WriteLine("Seriously you had the decision between a creature beoynd reality, a demon and an angel and you choose a human??!\nYou must be fun at parties...");
+                                Console.ReadKey();
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("You need to type in one of the species dum, dum remember spelling is important");
+                        breakflag = false;
                     }
                 }
-                else
-                {
-                    Console.WriteLine("You need to type in one of the species dum, dum remember spelling is important");
-                    breakflag = false;
-                }
-            }
 
-            //choosing magic flavour text
-            Console.WriteLine("\nAnd now for the exciting part choosing magic. Remember this is an important decision that will decide 3 out of your 4 spells");
-            Console.ReadKey();
-            Console.WriteLine("The magic types");
-            Console.ReadKey();
-            Console.WriteLine("Eldritch\nDarkness\nHoly\nFire\nIce");
+                //choosing magic flavour text
+                Console.WriteLine("\nAnd now for the exciting part choosing magic. Remember this is an important decision that will decide 3 out of your 4 spells");
+                Console.ReadKey();
+                Console.WriteLine("The magic types");
+                Console.ReadKey();
+                Console.WriteLine("Eldritch\nDarkness\nHoly\nFire\nIce");
 
-            //choosing magic code same system as the one above.
-            breakflag = false;
-            while (!breakflag)
-            {
-                string? input = Console.ReadLine().ToLower();
-                ModelOfMagic? magic = lists.modelOfMagicss.FirstOrDefault(s => s.Element.ToLower() == input);
-                if (magic != null)
-                {
-                    warriorModel.magic = magic;
-                    breakflag = true;
-
-                    switch (warriorModel.magic.Element)
-                    {
-                        case "eldritch":
-                            warriorModel.PowerLvl += lists.modelOfMagicss[0].PowerlvlAdd;
-                            Console.WriteLine("Lets go Eldritch you know it's the most powerful magic. As long as...You know you don't go insane and end yourself");
-                            Console.ReadKey();
-                            break;
-
-                        case "darkness":
-                            warriorModel.PowerLvl += lists.modelOfMagicss[1].PowerlvlAdd;
-                            Console.WriteLine("The magic of the edgelords remember to listen to linkin park or something while you go on this adventure. I think it will fit you");
-                            Console.ReadKey();
-                            break;
-
-                        case "holy":
-                            warriorModel.PowerLvl += lists.modelOfMagicss[2].PowerlvlAdd;
-                            Console.WriteLine("Ah you still have hope in life dont you. \nBet it's nice :)");
-                            Console.ReadKey();
-                            break;
-
-                        case "fire":
-                            warriorModel.PowerLvl += lists.modelOfMagicss[3].PowerlvlAdd;
-                            Console.WriteLine("You yell allot don't you?");
-                            Console.ReadKey();
-                            break;
-
-                        case "ice":
-                            warriorModel.PowerLvl += lists.modelOfMagicss[4].PowerlvlAdd;
-                            Console.WriteLine("I bet you are super cool, ha get it coool, I'm so funny (please like me :( )");
-                            Console.ReadKey();
-                            break;
-                    }
-                }
-                else
-                    Console.WriteLine("Spelling is important try again.");
+                //choosing magic code same system as the one above.
                 breakflag = false;
-                break;
-            }
-            Console.WriteLine("Your character summary");
-            Console.ReadKey();
-            Console.WriteLine($"\nCharacter Name: {warriorModel.Name}");
-            Console.ReadKey();
-            Console.WriteLine($"\nYou are a: {warriorModel.species}");
-            Console.ReadKey();
-            Console.WriteLine($"\nYour magic type is: {warriorModel.magic}");
-            Console.ReadKey();
-            Console.WriteLine($"\nYour Health is: {warriorModel.Health}");
-            Console.ReadKey();
-            Console.WriteLine($"\nYour Mana is: {warriorModel.Mana}");
-            Console.ReadKey();
-            Console.WriteLine($"\nLastly your power lvl is: {warriorModel.PowerLvl}");
-            Console.ReadKey();
-            Console.WriteLine("Press any key to save your character and start your adventure");
-            Console.ReadKey();
+                while (!breakflag)
+                {
+                    string? input = Console.ReadLine().ToLower();
+                    ModelOfMagic? magic = lists.modelOfMagicss.FirstOrDefault(s => s.Element.ToLower() == input);
+                    if (magic != null)
+                    {
+                        warriorModel.magic = magic;
+                        breakflag = true;
 
+                        switch (warriorModel.magic.Element)
+                        {
+                            case "eldritch":
+                                warriorModel.PowerLvl += lists.modelOfMagicss[0].PowerlvlAdd;
+                                Console.WriteLine("Lets go Eldritch you know it's the most powerful magic. As long as...You know you don't go insane and end yourself");
+                                Console.ReadKey();
+                                break;
+
+                            case "darkness":
+                                warriorModel.PowerLvl += lists.modelOfMagicss[1].PowerlvlAdd;
+                                Console.WriteLine("The magic of the edgelords remember to listen to linkin park or something while you go on this adventure. I think it will fit you");
+                                Console.ReadKey();
+                                break;
+
+                            case "holy":
+                                warriorModel.PowerLvl += lists.modelOfMagicss[2].PowerlvlAdd;
+                                Console.WriteLine("Ah you still have hope in life dont you. \nBet it's nice :)");
+                                Console.ReadKey();
+                                break;
+
+                            case "fire":
+                                warriorModel.PowerLvl += lists.modelOfMagicss[3].PowerlvlAdd;
+                                Console.WriteLine("You yell allot don't you?");
+                                Console.ReadKey();
+                                break;
+
+                            case "ice":
+                                warriorModel.PowerLvl += lists.modelOfMagicss[4].PowerlvlAdd;
+                                Console.WriteLine("I bet you are super cool, ha get it coool, I'm so funny (please like me :( )");
+                                Console.ReadKey();
+                                break;
+                        }
+                    }
+                    else
+                        Console.WriteLine("Spelling is important try again.");
+                    breakflag = false;
+                    break;
+                }
+                Console.WriteLine("Your character summary");
+                Console.ReadKey();
+                Console.WriteLine($"\nCharacter Name: {warriorModel.Name}");
+                Console.ReadKey();
+                Console.WriteLine($"\nYou are a: {warriorModel.species}");
+                Console.ReadKey();
+                Console.WriteLine($"\nYour magic type is: {warriorModel.magic}");
+                Console.ReadKey();
+                Console.WriteLine($"\nYour Health is: {warriorModel.Health}");
+                Console.ReadKey();
+                Console.WriteLine($"\nYour Mana is: {warriorModel.Mana}");
+                Console.ReadKey();
+                Console.WriteLine($"\nLastly your power lvl is: {warriorModel.PowerLvl}");
+                Console.ReadKey();
+                Console.WriteLine("Now press the E key to save your character and start your adventure.");
+                Console.WriteLine("But if you are not happy with your character press the R key to restart the process of character creation");
+
+                ConsoleKey key = Console.ReadKey(true).Key;
+                if (key == ConsoleKey.E) break;
+                if (key == ConsoleKey.R) Console.Clear();
+            }
             string CompleteWizard = $"Name: {warriorModel.Name}\nSpecies: {warriorModel.species}\nMagic type: {warriorModel.magic}\n Health: {warriorModel.Health}\nMana: {warriorModel.Mana}\nPowerlvl {warriorModel.PowerLvl}";
             string fileName = $"Wizard-{warriorModel.Name}";
             string folderPath = "Wizards";
