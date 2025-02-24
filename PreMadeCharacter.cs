@@ -117,12 +117,12 @@ namespace idk
                             break;
 
                         case "demonic ancestor":
-                            Console.WriteLine("Look on the bright side as a Demonic Ancestor you will never get cold on the bad side you will defintly end up in hell");
+                            Console.WriteLine("Look on the bright side as a Demonic Ancestor, you will never get cold. On the bad side you will defintly end up in hell");
                             Console.ReadKey();
                             break;
 
                         case "angelic ancestor":
-                            Console.WriteLine("I am soooooooo jealous of your wings I also want angel wings, why dont I have angel wings :()");
+                            Console.WriteLine("I am soooooooo jealous of your wings\n I also want angel wings\n why dont I have angel wings :()");
                             Console.ReadKey();
                             break;
 
@@ -140,20 +140,51 @@ namespace idk
             }
 
             //choosing magic same system as the one above with breakflag.
-            Console.WriteLine("\nAnd now for the exciting part choosing magic. Remember this is an important decision that will decide 3 out of your 4 spells");
+            Console.WriteLine("And now for the exciting part choosing magic. Remember this is an important decision that will decide 3 out of your 4 spells");
+            Console.WriteLine("The magic types");
+            Console.WriteLine("Eldritch\nDarkness\nHoly\nFire\nIce");
 
             while (!breakflag)
             {
-                string? magics = Console.ReadLine().ToLower();
+                string? input = Console.ReadLine().ToLower();
+                ModelOfMagic? magic = lists.modelOfMagicss.FirstOrDefault(s => s.Element.ToLower() == input);
+                if (magic != null)
+                {
+                    warriorModel.magic = magic;
+                    breakflag = true;
 
-                switch
+                    switch (warriorModel.magic.Element)
+                    {
+                        case "eldritch":
+                            Console.WriteLine("Lets go Eldritch you know it's the most powerful magic. As long as...You know you don't go insane and end yourself");
+                            break;
 
+                        case "darkness":
+                            Console.WriteLine("The magic of the edgelords remember to listen to linkin park or something while you go on this adventure. I think it will fit you");
+                            break;
 
+                        case "holy":
+                            Console.WriteLine("Ah you still have hope in life dont you. \nBet it's nice :)");
+                            break;
 
+                        case "fire":
+                            Console.WriteLine("You yell allot don't you?");
+                            break;
+
+                        case "ice":
+                            Console.WriteLine("I bet you are super cool, ha get it coool, I'm so funny (please like me :(, )");
+                            break;
+
+                        default:
+                            Console.WriteLine("Spelling is important try again.");
+                            breakflag = false;
+                            break;
+                    }
+                }
             }
 
 
 
-            }
         }
     }
+}
