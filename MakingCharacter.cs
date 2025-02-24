@@ -255,14 +255,13 @@ namespace idk
                         Console.WriteLine("please press one of the two keys listed above");
                     }
                 }
-
             }
+            //saves everything in a text document
             string CompleteWizard = $"Name: {warriorModel.Name}\nSpecies: {warriorModel.species}\nMagic type: {warriorModel.magic}\n Health: {warriorModel.Health}\nMana: {warriorModel.Mana}\nPowerlvl {warriorModel.PowerLvl}";
-            string fileName = $"Wizard-{warriorModel.Name}";
             string folderPath = "Wizards";
+            string fileName = $"Wizard-{warriorModel.Name}";
 
             string filePath = Path.Combine(folderPath, fileName);
-
             File.WriteAllText(filePath, CompleteWizard);
         }
     }
