@@ -15,6 +15,8 @@ namespace idk.models
 
             // while (!restart)
             // {
+
+            //picking your name
             Console.WriteLine("Pick your character name (cannot be longer then nine characters)");
             string newName = Console.ReadLine().ToLower();
 
@@ -45,6 +47,7 @@ namespace idk.models
                     newName = Console.ReadLine().ToLower();
                 }
             }
+
 
             // }
 
