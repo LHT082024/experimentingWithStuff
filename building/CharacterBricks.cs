@@ -19,6 +19,7 @@ namespace idk.building
 //dictonary for characters
 public class CharacterBricks
 {
+    //Species.
     public static readonly Dictionary<string, CharacterStats> Species = new()
             {
                 {
@@ -28,6 +29,8 @@ public class CharacterBricks
 
             };
 
+
+    //magic types
     public static readonly Dictionary<string, List<string>> Spells = new()
             {
                 {

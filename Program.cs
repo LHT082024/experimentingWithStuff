@@ -1,4 +1,5 @@
-﻿using idk.models;
+﻿using idk.building;
+using idk.models;
 
 namespace idk;
 
@@ -9,8 +10,9 @@ class Program
         MakingCharacter makingWizard = new();
         WarriorModel myWizard = new();
         ReadingWizards readingWizards = new();
-        Testingstuff testingstuff = new();
+        CreatingCharacter creatingCharacter = new();
 
+        creatingCharacter.CharacterCreation();
         // readingWizards.Wizards();
         // readingWizards.Test();
 

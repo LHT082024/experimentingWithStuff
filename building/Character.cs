@@ -19,6 +19,10 @@ namespace idk.building
             return this;
         }
 
-        public Character AddMagic()
+        public Character AddMagic(string magicType)
+        {
+            Spells = CharacterBricks.Spells[magicType];
+            return this;
+        }
     }
 }
