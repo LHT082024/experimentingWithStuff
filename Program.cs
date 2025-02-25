@@ -16,7 +16,6 @@ class Program
 
         // makingWizard.Intro();
         // makingWizard.CreateCharacter();
-        testingstuff.ChName();
 
     }
 }
