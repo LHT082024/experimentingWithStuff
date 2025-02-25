@@ -50,8 +50,30 @@ namespace idk.models
 
             //giving you species list
             Console.WriteLine("\nType in one of the listed species\n");
+            Console.ReadKey();
             Console.WriteLine("Eldritch creature    Demonic Ancestor");
             Console.WriteLine("Angelic Ancestor         Human       ");
+
+            bool breakflag = false;
+            while (!breakflag)
+            {
+                //picking species
+                string? input = Console.ReadLine().ToLower();
+
+                if (input == "eldritch creature" || input == "demonic ancestor" || input == "angelic ancestor" || input == "human")
+                {
+                    character.Species = input;
+                    Console.WriteLine($"your species is {character.Species}");
+                    breakflag = true;
+                }
+                else
+                {
+                    Console.WriteLine("You need to type in one of the species dum, dum remember spelling is important");
+                    breakflag = false;
+                }
+            }
+
+
 
 
             // }
