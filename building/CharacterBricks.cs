@@ -14,13 +14,15 @@ namespace idk.building
         public int Damage = damage;
 
     }
-}
 
-//dictonary for characters
-public class CharacterBricks
-{
-    //Species.
-    public static readonly Dictionary<string, CharacterStats> Species = new()
+    public class SpeciesList()
+    {
+        public string
+    }
+    public class CharacterBricks
+    {
+        //Character stats
+        public static readonly Dictionary<string, CharacterStats> Stats = new()
             {
                 {
                     "eldritch creature",
@@ -29,9 +31,8 @@ public class CharacterBricks
 
             };
 
-
-    //magic types
-    public static readonly Dictionary<string, List<string>> Spells = new()
+        //magic types
+        public static readonly Dictionary<string, List<string>> Spells = new()
             {
                 {
                     "eldritch magic",
@@ -39,4 +40,5 @@ public class CharacterBricks
                 }
 
             };
+    }
 }

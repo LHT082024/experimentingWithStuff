@@ -5,17 +5,19 @@ using System.Threading.Tasks;
 
 namespace idk.building
 {
-    public class Character(string name)
+    public class Character(string name, string species)
     {
         //connect classes with attributes
         public string Name = name;
+        public string Species = species;
         public CharacterStats Stats;
         public List<string> Spells;
 
+
         //Methods that can be used to add stuff
-        public Character AddSpecies(string species)
+        public Character AddStats(string stats)
         {
-            Stats = CharacterBricks.Species[species];
+            Stats = CharacterBricks.Stats[stats];
             return this;
         }
 
