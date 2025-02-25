@@ -9,11 +9,14 @@ class Program
         MakingCharacter makingWizard = new();
         WarriorModel myWizard = new();
         ReadingWizards readingWizards = new();
+        Testingstuff testingstuff = new();
 
         // readingWizards.Wizards();
         // readingWizards.Test();
 
-        makingWizard.Intro();
-        makingWizard.CreateCharacter();
+        // makingWizard.Intro();
+        // makingWizard.CreateCharacter();
+        testingstuff.ChName();
+
     }
 }
