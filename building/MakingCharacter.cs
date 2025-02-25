@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using idk.building;
 
 namespace idk.models
 {
@@ -9,7 +10,7 @@ namespace idk.models
     {
         public void CharacterCreation()
         {
-            var player =
+            var player = new Character("Ika").AddSpecies("eldritch creature");
         }
 
     }
