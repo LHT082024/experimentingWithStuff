@@ -5,10 +5,13 @@ using System.Threading.Tasks;
 
 namespace idk.building
 {
-    public class Dictonary
+    public class CharacterBricks
     {
-        public static readonly Dictionary<string, List<string>> Species = new()
+        public static readonly Dictionary<string, CharacterStats> Species = new()
         {
+            {
+
+            }
 
         };
 
