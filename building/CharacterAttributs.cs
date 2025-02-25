@@ -10,6 +10,6 @@ namespace idk.building
         public string Name = name;
         public string Species;
         // public CharacterStats Stats;
-        public List<string> Spells;
+        public List<string> Spellsbook;
     }
 }
