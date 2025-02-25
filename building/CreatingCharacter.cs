@@ -11,12 +11,44 @@ namespace idk.models
         public void CharacterCreation()
         {
             Character character = new();
-            Console.WriteLine("Pick your character name");
+            bool restart = false;
+
+            // while (!restart)
+            // {
+            Console.WriteLine("Pick your character name (cannot be longer then nine characters)");
             string newName = Console.ReadLine().ToLower();
-            character.Name = newName;
-            Console.WriteLine($"Your name is {character.Name}");
+
+            bool nameIsRight = false;
+            while (!nameIsRight)
+            {
+                if (string.IsNullOrWhiteSpace(newName))
+                {
+                    Console.WriteLine("Name cannot be blank");
+                }
+                else if (newName.Length > 9)
+                {
+                    Console.WriteLine("name is to long try again");
+                    Console.ReadKey();
+                }
+                else
+                {
+                    character.Name = newName;
+                    Console.WriteLine($"Your name is {character.Name}");
+
+                    nameIsRight = true;
+                    Console.ReadKey();
+                }
+
+                if (!nameIsRight)
+                {
+                    Console.WriteLine("pick your character name");
+                    newName = Console.ReadLine().ToLower();
+                }
+            }
+
+            // }
 
         }
-
     }
+
 }
