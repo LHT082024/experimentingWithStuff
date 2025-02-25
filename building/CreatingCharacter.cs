@@ -48,6 +48,11 @@ namespace idk.models
                 }
             }
 
+            //giving you species list
+            Console.WriteLine("\nType in one of the listed species\n");
+            Console.WriteLine("Eldritch creature    Demonic Ancestor");
+            Console.WriteLine("Angelic Ancestor         Human       ");
+
 
             // }
 
