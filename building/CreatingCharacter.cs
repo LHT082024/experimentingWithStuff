@@ -10,9 +10,12 @@ namespace idk.models
     {
         public void CharacterCreation()
         {
-            var player = new Character("Ika", "eldritch creature").AddMagic("eldritch magic").AddStats("eldritch creature");
+            Character character = new();
+            Console.WriteLine("Pick your character name");
+            string newName = Console.ReadLine().ToLower();
+            character.Name = newName;
+            Console.WriteLine($"Your name is {character.Name}");
 
-            Console.WriteLine($"your name: {player.Name}\n your a: {player.spe}\n your magic type is {player.Spells}");
         }
 
     }

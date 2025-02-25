@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace idk.building
 {
-    public class Character(string name, string species)
+    public class Character()
     {
         //connect classes with attributes
-        public string Name = name;
-        public string Species = species;
+        public string Name;
+        public string Species;
         public CharacterStats Stats;
         public List<string> Spells;
 

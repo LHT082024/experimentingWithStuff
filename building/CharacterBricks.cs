@@ -15,10 +15,6 @@ namespace idk.building
 
     }
 
-    public class SpeciesList()
-    {
-        public string
-    }
     public class CharacterBricks
     {
         //Character stats
