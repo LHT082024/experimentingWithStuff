@@ -7,7 +7,7 @@ using idk.models;
 
 namespace idk
 {
-    public class Testingstuff :
+    public class Testingstuff
     {
 
         public void newCharacter()
@@ -16,3 +16,5 @@ namespace idk
         }
     }
 }
+
+//make class that refrence a dictonary where I associate words with different words
