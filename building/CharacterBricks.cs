@@ -32,7 +32,7 @@ namespace idk.building
             {
                 {
                     "eldritch magic",
-                    ["szathot's eyes", "sphere of destruction", "shield of yog"]
+                    ["azathot's eyes", "sphere of destruction", "shield of yog"]
                 }
 
             };

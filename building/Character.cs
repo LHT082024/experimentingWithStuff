@@ -8,8 +8,9 @@ namespace idk.building
     public class Character()
     {
         //connect classes with attributes
-        public string Name;
-        public string Species;
+        public string? Name;
+        public string? Species;
+        public string? magic;
         public CharacterStats Stats;
         public List<string> Spells;
 

@@ -8,6 +8,7 @@ namespace idk.models
 {
     public class CreatingCharacter
     {
+
         public void CharacterCreation()
         {
             Character character = new();
@@ -65,6 +66,7 @@ namespace idk.models
                     character.Species = input;
                     character.AddStats(input);
                     Console.WriteLine($"your species is {character.Species}");
+                    Console.WriteLine($"{character.Stats.Hp}, {character.Stats.Damage}, {character.Stats.Mana}");
                     breakflag = true;
                 }
                 else
@@ -83,6 +85,42 @@ namespace idk.models
 
             breakflag = false;
             while (!breakflag)
+            {
+                string? input = Console.ReadLine().ToLower();
+                if (input == "eldritch magic" || input == "darkness" || input == "fire" || input == "ice")
+                {
+                    character.magic = input;
+                    character.AddMagic(input);
+                    Console.WriteLine($"your magic type is {character.Spells}");
+                    Console.WriteLine($"{character.Spells[0]}, ");
+                    breakflag = true;
+                }
+                else
+                {
+                    Console.WriteLine("Yo if you want this game to be longer then three sentences pick a magic type");
+                    breakflag = false;
+                }
+                // Console.WriteLine("Your character summary");
+                // Console.ReadKey();
+                // Console.WriteLine($"\nCharacter Name: {character.Name}");
+                // Console.ReadKey();
+                // Console.WriteLine($"You are a: {character.Species}");
+                // Console.ReadKey();
+                // Console.WriteLine($"Your magic type is: {character.magic}");
+                // Console.ReadKey();
+                // Console.WriteLine($"Your Health is: {warriorModel.Health}");
+                // Console.ReadKey();
+                // Console.WriteLine($"Your Mana is: {warriorModel.Mana}");
+                // Console.ReadKey();
+                // Console.WriteLine($"Lastly your power lvl is: {warriorModel.PowerLvl}");
+                // Console.ReadKey();
+                // Console.WriteLine("\nNow press the E key to save your character and start your adventure.");
+            }
+
+
+
+
+
 
 
 
