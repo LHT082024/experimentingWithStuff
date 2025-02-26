@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using idk.building;
+using idk.character;
 
-namespace idk.models
+namespace idk.character
 {
     public class CreatingCharacter
     {

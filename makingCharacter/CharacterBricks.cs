@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using idk.building;
+using idk.character;
 
-namespace idk.building
+namespace idk.character
 {
     //stats for the character
     public class CharacterStats(int hp, int mana, int damage)
