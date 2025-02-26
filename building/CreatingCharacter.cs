@@ -86,11 +86,11 @@ namespace idk.models
                 breakflag = false;
                 while (!breakflag)
                 {
-                    string? input = Console.ReadLine().ToLower();
-                    if (input == "eldritch" || input == "darkness" || input == "fire" || input == "ice")
+                    string? magic = Console.ReadLine().ToLower();
+                    if (magic == "eldritch" || magic == "darkness" || magic == "fire" || magic == "ice")
                     {
-                        character.magic = input;
-                        character.AddMagic(input);
+                        character.magic = magic;
+                        character.AddMagic(magic);
                         Console.WriteLine($"your magic type is {character.magic}");
                         Console.WriteLine($" your spells are the three listed below: {character.Spells[0]}, {character.Spells[1]}, {character.Spells[2]}");
                         breakflag = true;

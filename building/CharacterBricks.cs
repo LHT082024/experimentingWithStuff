@@ -31,7 +31,7 @@ namespace idk.building
         public static readonly Dictionary<string, List<string>> Spells = new()
             {
                 {
-                    "eldritch magic",
+                    "eldritch",
                     ["azathot's eyes", "sphere of destruction", "shield of yog"]
                 }
 
