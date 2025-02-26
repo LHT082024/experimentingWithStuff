@@ -9,28 +9,32 @@ namespace idk.mobs
     {
         public int health;
         public int damage = 2;
-        static string playerCh = $"Wizards/Wizard-Ika";
+        public string playerCh = $"Wizards/Wizard-Ika";
 
 
         public void ReadHp()
         {
             string[] player = File.ReadAllLines(playerCh);
-            Console.WriteLine($"{playerCh}");
 
-            // foreach (string line in player)
-            // {
-            //     if (line.StartsWith("Health"))
-            //     {
-            //         string[] parts = line.Split(':');
-            //         if (parts.Length == 2 && int.TryParse(parts[1].Trim(), out int hp))
-            //         {
-            //             health = hp;
-            //             return health;
-            //         }
-            //     }
 
-            // }
-            // return health;
+
+            foreach (string line in player)
+            {
+                string[] parts = line.Split(':');
+                if (parts.Length == 2)
+                {
+                    string key = parts[0].Trim();
+                    string value = parts[1].Trim();
+
+                    switch (key)
+                    {
+                        case "Health":
+                            int.TryParse(value, out health);
+                            break;
+                    }
+
+                }
+            }
         }
 
 
