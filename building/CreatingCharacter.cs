@@ -49,7 +49,7 @@ namespace idk.models
             }
 
             //giving you species list
-            Console.WriteLine("\nType in one of the listed species\n");
+            Console.WriteLine("\nType in one of the listed species");
             Console.ReadKey();
             Console.WriteLine("Eldritch creature    Demonic Ancestor");
             Console.WriteLine("Angelic Ancestor         Human       ");
@@ -63,6 +63,7 @@ namespace idk.models
                 if (input == "eldritch creature" || input == "demonic ancestor" || input == "angelic ancestor" || input == "human")
                 {
                     character.Species = input;
+                    character.AddStats(input);
                     Console.WriteLine($"your species is {character.Species}");
                     breakflag = true;
                 }
@@ -72,6 +73,17 @@ namespace idk.models
                     breakflag = false;
                 }
             }
+
+            //choosing magic flavour text
+            Console.WriteLine("\nAnd now for the exciting part choosing magic. Remember this is an important decision that will decide 3 out of your 4 spells");
+            Console.ReadKey();
+            Console.WriteLine("The magic types");
+            Console.ReadKey();
+            Console.WriteLine("Eldritch\nDarkness\nHoly\nFire\nIce");
+
+            breakflag = false;
+            while (!breakflag)
+
 
 
 
