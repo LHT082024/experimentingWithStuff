@@ -82,6 +82,7 @@ namespace idk.models
                 Console.WriteLine("The magic types\n");
                 Console.WriteLine("Eldritch\nDarkness\nHoly\nFire\nIce");
 
+                //if statment for magic types
                 breakflag = false;
                 while (!breakflag)
                 {
@@ -98,6 +99,8 @@ namespace idk.models
                         Console.WriteLine("Yo if you want this game to be longer then three sentences pick a magic type");
                         breakflag = false;
                     }
+
+                    //summaries character and prints it out
                     Console.WriteLine("Your character summary");
                     Console.ReadKey();
                     Console.WriteLine($"\nCharacter Name: {character.Name}");

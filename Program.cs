@@ -7,15 +7,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        WarriorModel myWizard = new();
-        ReadingWizards readingWizards = new();
+        // WarriorModel myWizard = new();
+        // ReadingWizards readingWizards = new();
         CreatingCharacter creatingCharacter = new();
+        Intros intros = new();
 
+        intros.PlaneIsekaiIntro();
         creatingCharacter.CharacterCreation();
-
-
-        // makingWizard.Intro();
-        // makingWizard.CreateCharacter();
-
     }
 }
