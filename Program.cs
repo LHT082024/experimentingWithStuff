@@ -15,7 +15,8 @@ class Program
 
         // intros.PlaneIsekaiIntro();
         // creatingCharacter.CharacterCreation();
-        testMob.printshit();
+        testMob.ReadHp();
+        // testMob.printshit();
 
     }
 }

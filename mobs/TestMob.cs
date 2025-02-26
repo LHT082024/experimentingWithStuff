@@ -12,24 +12,25 @@ namespace idk.mobs
         static string playerCh = $"Wizards/Wizard-Ika";
 
 
-        public static int ReadHp()
+        public void ReadHp()
         {
             string[] player = File.ReadAllLines(playerCh);
+            Console.WriteLine($"{playerCh}");
 
-            foreach (string line in player)
-            {
-                if (line.StartsWith("Health"))
-                {
-                    string[] parts = line.Split(':');
-                    if (parts.Length == 2 && int.TryParse(parts[1].Trim(), out int hp))
-                    {
-                        health = hp;
-                        return health;
-                    }
-                }
+            // foreach (string line in player)
+            // {
+            //     if (line.StartsWith("Health"))
+            //     {
+            //         string[] parts = line.Split(':');
+            //         if (parts.Length == 2 && int.TryParse(parts[1].Trim(), out int hp))
+            //         {
+            //             health = hp;
+            //             return health;
+            //         }
+            //     }
 
-            }
-            return health;
+            // }
+            // return health;
         }
 
 
