@@ -79,8 +79,7 @@ namespace idk.models
                 //choosing magic flavour text
                 Console.WriteLine("\nAnd now for the exciting part choosing magic. Remember this is an important decision that will decide 3 out of your 4 spells");
                 Console.ReadKey();
-                Console.WriteLine("The magic types");
-                Console.ReadKey();
+                Console.WriteLine("The magic types\n");
                 Console.WriteLine("Eldritch\nDarkness\nHoly\nFire\nIce");
 
                 breakflag = false;
@@ -92,7 +91,6 @@ namespace idk.models
                         character.magic = magic;
                         character.AddMagic(magic);
                         Console.WriteLine($"your magic type is {character.magic}");
-                        Console.WriteLine($" your spells are the three listed below: {character.Spells[0]}, {character.Spells[1]}, {character.Spells[2]}");
                         breakflag = true;
                     }
                     else
@@ -108,11 +106,12 @@ namespace idk.models
                     Console.ReadKey();
                     Console.WriteLine($"Your magic type is: {character.magic}");
                     Console.ReadKey();
-                    Console.WriteLine($"Your stats are as followed\nYour hp: {character.Stats.Hp}\nYour mana: {character.Stats.Mana}\nYour base damage: {character.Stats.Damage}");
-                    Console.ReadKey();
                     Console.WriteLine($"Your spells are: {character.Spells[0]}\n{character.Spells[1]}\n{character.Spells[2]}");
                     Console.ReadKey();
+                    Console.WriteLine($"Your stats are as followed\nYour hp: {character.Stats.Hp}\nYour mana: {character.Stats.Mana}\nYour base damage: {character.Stats.Damage}");
+                    Console.ReadKey();
                     Console.WriteLine("\nNow press the E key to save your character and start your adventure.");
+                    Console.WriteLine("But if you are not happy with your character press the R key to restart the process of character creation");
                 }
                 while (true)
                 {
