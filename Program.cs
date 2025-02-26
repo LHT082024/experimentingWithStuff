@@ -1,4 +1,5 @@
 ﻿using idk.character;
+using idk.mobs;
 using idk.models;
 
 namespace idk;
@@ -10,8 +11,11 @@ class Program
         //intro and character creator
         CreatingCharacter creatingCharacter = new();
         Intros intros = new();
+        TestMob testMob = new();
 
-        intros.PlaneIsekaiIntro();
-        creatingCharacter.CharacterCreation();
+        // intros.PlaneIsekaiIntro();
+        // creatingCharacter.CharacterCreation();
+        testMob.printshit();
+
     }
 }

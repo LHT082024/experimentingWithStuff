@@ -7,29 +7,32 @@ namespace idk.mobs
 {
     public class TestMob
     {
-        public int hp = 15;
+        public static int health;
         public int damage = 2;
         static string playerCh = $"Wizards/Wizard-Ika.txt";
 
 
-        public static void gettingHp()
+        public static void ReadHp()
         {
             string[] player = File.ReadAllLines(playerCh);
 
-            for (int i = 0; i < player.Length; i++)
+            foreach (string line in player)
             {
-                if (player[i].StartsWith("health"))
+                if (line.StartsWith("health"))
                 {
-                    string[] parts = player[i].Split(':');
-                    if (parts.Length == 2 && int.TryParse(parts[1].Trim(), out int currentHP))
+                    string[] parts = line.Split(':');
+                    if (parts.Length == 2 && int.TryParse(parts[1].Trim(), out int hp))
                     {
-
+                        health = hp;
                     }
                 }
 
             }
+        }
 
-
+        public void printshit()
+        {
+            Console.WriteLine(health);
         }
 
 
