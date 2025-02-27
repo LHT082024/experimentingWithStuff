@@ -74,15 +74,15 @@ namespace idk.Stories
         public void Morning()
         {
 
-            GaryHealth = gary.health;
-            Console.WriteLine($"Gary currently have {GaryHealth} hit points\nClick any button to throw an Eldritch sphere at Gary");
-            Console.ReadKey();
-            GaryHealth = GaryHealth - damage2;
-            Console.WriteLine($"Gary's health after the eldritch sphere is {GaryHealth}\nYou almost killed him you monster");
-            Console.ReadKey();
-            Console.WriteLine($"your health is {playerhealth}, gary wants revenge so he fires a fireball.");
-            gary.attacks();
-            Console.WriteLine($"your health is now{playerhealth}");
+            // GaryHealth = gary.health;
+            // Console.WriteLine($"Gary currently have {GaryHealth} hit points\nClick any button to throw an Eldritch sphere at Gary");
+            // Console.ReadKey();
+            // GaryHealth = GaryHealth - damage2;
+            // Console.WriteLine($"Gary's health after the eldritch sphere is {GaryHealth}\nYou almost killed him you monster");
+            // Console.ReadKey();
+            // Console.WriteLine($"your health is {playerhealth}, gary wants revenge so he fires a fireball.");
+            // gary.attacks();
+            // Console.WriteLine($"your health is now{playerhealth}");
         }
     }
 }

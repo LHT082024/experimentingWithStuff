@@ -7,13 +7,6 @@ namespace idk.MobsAndAttacks
 {
     public class Gary
     {
-        public int health = 10;
-
-        //Gary's attacks
-        public void attacks()
-        {
-
-        }
-
+        Mob newGary = new Mob("Gary").AddSpeciesStats("Human");
     }
 }
