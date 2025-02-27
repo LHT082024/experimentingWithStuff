@@ -13,7 +13,7 @@ namespace idk.Stories
         Gary gary = new();
 
         //variables I need
-        public string? name;
+        public string name = "";
         public int health;
         public int mana;
         public string? spell1;
@@ -23,15 +23,13 @@ namespace idk.Stories
         public string playerCh = $"Wizards/Wizard-Ika";
 
 
+        //reading stats and assigning them to local variables
         public void Readstats()
         {
             string[] player = File.ReadAllLines(playerCh);
 
-
-
             foreach (string line in player)
             {
-                // Console.WriteLine(line);
                 string[] parts = line.Split(':');
                 if (parts.Length == 2)
                 {
@@ -40,19 +38,35 @@ namespace idk.Stories
 
                     switch (key)
                     {
+                        case "Name":
+                            name = value;
+                            break;
+
                         case "Health":
                             int.TryParse(value, out health);
                             break;
-                    }
 
+                        case "Mana":
+                            int.TryParse(value, out mana);
+                            break;
+
+                        case "Spell 1":
+                            spell1 = value;
+                            break;
+                        case "Spell 2":
+                            spell2 = value;
+                            break;
+                        case "Spell 3":
+                            spell3 = value;
+                            break;
+                    }
                 }
             }
         }
 
         public void Morning()
         {
-
-
+            Console.WriteLine($"{name}\n{health}\n{spell1}\n{spell2}\n{spell3}");
         }
     }
 }
