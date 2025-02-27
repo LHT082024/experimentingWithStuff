@@ -12,7 +12,6 @@ namespace idk.character
         public int Hp = hp;
         public int Mana = mana;
         public int Damage = damage;
-
     }
 
     public class CharacterBricks
@@ -24,7 +23,6 @@ namespace idk.character
                     "eldritch creature",
                     new(10, 10, 10)
                 },
-
             };
 
         //magic types
@@ -34,7 +32,10 @@ namespace idk.character
                     "eldritch",
                     ["azathot's eyes", "sphere of destruction", "shield of yog"]
                 }
-
             };
+        public static readonly Dictionary<string, int> SpellDamage = new()
+        {
+            {"sphere of destruction", 6}
+        };
     }
 }

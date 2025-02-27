@@ -7,6 +7,14 @@ namespace idk.MobsAndAttacks
 {
     public class Gary
     {
-        
+        DamageAttacks damageAttacks = new();
+
+        //Gary's attacks
+        public void attacks()
+        {
+            damageAttacks.Basicattack();
+            damageAttacks.FireBall();
+        }
+
     }
 }
