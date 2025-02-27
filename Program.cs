@@ -11,12 +11,12 @@ class Program
     {
         GaryStoleYourLunch garyStoleYourLunch = new();
         // //intro and character creator
-        // CreatingCharacter creatingCharacter = new();
+        CreatingCharacter creatingCharacter = new();
         // Intros intros = new();
         // TestMob testMob = new();
 
         // // intros.PlaneIsekaiIntro();
-        // // creatingCharacter.CharacterCreation();
+        creatingCharacter.CharacterCreation();
 
         // testMob.ReadHp();
         // testMob.printshit();
@@ -25,8 +25,8 @@ class Program
         // testMob.Basicattack();
         // // testMob.SaveStats();
         // testMob.Basicattack();
-        garyStoleYourLunch.Readstats();
-        garyStoleYourLunch.Morning();
+        // garyStoleYourLunch.Readstats();
+        // garyStoleYourLunch.Morning();
 
 
 

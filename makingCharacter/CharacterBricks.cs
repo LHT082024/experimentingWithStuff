@@ -33,9 +33,10 @@ namespace idk.character
                     ["azathot's eyes", "sphere of destruction", "shield of yog"]
                 }
             };
-        public static readonly Dictionary<string, int> SpellDamage = new()
+        public static readonly Dictionary<string, List<int>> SpellDamage = new()
         {
-            {"sphere of destruction", 6}
+             { "sphere of destruction", new List<int> { 6 } }
+
         };
     }
 }

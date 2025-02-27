@@ -13,8 +13,7 @@ namespace idk.character
         public string? Species;
         public string? magic;
         public CharacterStats Stats;
-
-        public int magicdm;
+        public List<int> magicdm;
         public List<string> Spells;
 
 
