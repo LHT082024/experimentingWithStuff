@@ -90,6 +90,7 @@ namespace idk.character
                     {
                         character.magic = magic;
                         character.AddMagic(magic);
+                        character.MagicAttack(character.Spells[0]);
                         Console.WriteLine($"your magic type is {character.magic}");
                         breakflag = true;
                     }
@@ -108,7 +109,7 @@ namespace idk.character
                     Console.ReadKey();
                     Console.WriteLine($"Your magic type is: {character.magic}");
                     Console.ReadKey();
-                    Console.WriteLine($"Your spells are: \n{character.Spells[0]}\n{character.Spells[1]} with the damage of: {character.magicdm[0]}\n{character.Spells[2]}\n");
+                    Console.WriteLine($"Your spells are: \n{character.Spells[0]}\n{character.Spells[1]} with the damage of: {CharacterBricks.SpellDamage[character.Spells[1]][0]}\n{character.Spells[2]}\n");
                     Console.ReadKey();
                     Console.WriteLine($"Your stats are as followed\nYour hp: {character.Stats.Hp}\nYour mana: {character.Stats.Mana}\nYour base damage: {character.Stats.Damage}");
                     Console.ReadKey();

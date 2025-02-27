@@ -35,7 +35,9 @@ namespace idk.character
             };
         public static readonly Dictionary<string, List<int>> SpellDamage = new()
         {
-             { "sphere of destruction", new List<int> { 6 } }
+             { "sphere of destruction", new List<int> { 6 } },
+             { "azathot's eyes", new List<int> { 0 } },
+             { "shield of yog", new List<int> { 0 } }
 
         };
     }
