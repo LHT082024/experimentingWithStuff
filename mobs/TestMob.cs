@@ -20,6 +20,7 @@ namespace idk.mobs
 
             foreach (string line in player)
             {
+                // Console.WriteLine(line);
                 string[] parts = line.Split(':');
                 if (parts.Length == 2)
                 {
