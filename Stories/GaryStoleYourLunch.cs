@@ -74,7 +74,7 @@ namespace idk.Stories
 
         public void Morning()
         {
-
+            Console.WriteLine(gary.newGary.Stuff.Hp);
             // GaryHealth = gary.health;
             // Console.WriteLine($"Gary currently have {GaryHealth} hit points\nClick any button to throw an Eldritch sphere at Gary");
             // Console.ReadKey();
