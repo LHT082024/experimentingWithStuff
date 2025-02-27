@@ -136,7 +136,7 @@ namespace idk.character
                 }
             }
             //saves everything in a text document
-            string CompletePlayer = $"Name: {character.Name}\nSpecies: {character.Species}\nMagic type: {character.magic}\nSpell 1:{character.Spells[0]}\nSpell 2:{character.Spells[1]}\nSpell 3:{character.Spells[2]}\nHealth: {character.Stats.Hp}\nMana: {character.Stats.Mana}\nDamage: {character.Stats.Damage}";
+            string CompletePlayer = $"Name: {character.Name}\nSpecies: {character.Species}\nMagic type: {character.magic}\nSpell 1:{character.Spells[0]}\nSpell 2:{character.Spells[1]}\nDamage2: {CharacterBricks.SpellDamage[character.Spells[1]][0]}\nSpell 3:{character.Spells[2]}\nHealth: {character.Stats.Hp}\nMana: {character.Stats.Mana}\nDamage: {character.Stats.Damage}";
             string folderPath = "Wizards";
             string fileName = $"Wizard-{character.Name}";
 
