@@ -19,6 +19,7 @@ namespace idk.Stories
         public int playermana;
         public string? spell1;
         public string? spell2;
+        public int damage2;
         public string? spell3;
 
         public string playerCh = $"Wizards/Wizard-Ika";
@@ -57,6 +58,11 @@ namespace idk.Stories
                         case "Spell 2":
                             spell2 = value;
                             break;
+
+                        case "Damage2":
+                            int.TryParse(value, out damage2);
+                            break;
+
                         case "Spell 3":
                             spell3 = value;
                             break;
@@ -69,10 +75,14 @@ namespace idk.Stories
         {
 
             GaryHealth = gary.health;
-            Console.WriteLine(GaryHealth);
-            // GaryHealth = spell2 - GaryHealth;
-
-
+            Console.WriteLine($"Gary currently have {GaryHealth} hit points\nClick any button to throw an Eldritch sphere at Gary");
+            Console.ReadKey();
+            GaryHealth = GaryHealth - damage2;
+            Console.WriteLine($"Gary's health after the eldritch sphere is {GaryHealth}\nYou almost killed him you monster");
+            Console.ReadKey();
+            Console.WriteLine($"your health is {playerhealth}, gary wants revenge so he fires a fireball.");
+            gary.attacks();
+            Console.WriteLine($"your health is now{playerhealth}");
         }
     }
 }

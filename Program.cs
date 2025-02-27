@@ -16,7 +16,7 @@ class Program
         // TestMob testMob = new();
 
         // // intros.PlaneIsekaiIntro();
-        creatingCharacter.CharacterCreation();
+        // creatingCharacter.CharacterCreation();
 
         // testMob.ReadHp();
         // testMob.printshit();
@@ -25,10 +25,7 @@ class Program
         // testMob.Basicattack();
         // // testMob.SaveStats();
         // testMob.Basicattack();
-        // garyStoleYourLunch.Readstats();
-        // garyStoleYourLunch.Morning();
-
-
-
+        garyStoleYourLunch.Readstats();
+        garyStoleYourLunch.Morning();
     }
 }
