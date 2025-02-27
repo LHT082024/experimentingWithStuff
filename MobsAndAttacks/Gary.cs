@@ -8,6 +8,7 @@ namespace idk.MobsAndAttacks
     public class Gary
     {
         DamageAttacks damageAttacks = new();
+        public int health = 10;
 
         //Gary's attacks
         public void attacks()

@@ -14,8 +14,9 @@ namespace idk.Stories
 
         //variables I need
         public string name = "";
-        public int health;
-        public int mana;
+        public int playerhealth;
+        public int GaryHealth;
+        public int playermana;
         public string? spell1;
         public string? spell2;
         public string? spell3;
@@ -43,11 +44,11 @@ namespace idk.Stories
                             break;
 
                         case "Health":
-                            int.TryParse(value, out health);
+                            int.TryParse(value, out playerhealth);
                             break;
 
                         case "Mana":
-                            int.TryParse(value, out mana);
+                            int.TryParse(value, out playerhealth);
                             break;
 
                         case "Spell 1":
@@ -66,7 +67,12 @@ namespace idk.Stories
 
         public void Morning()
         {
-            Console.WriteLine($"{name}\n{health}\n{spell1}\n{spell2}\n{spell3}");
+
+            GaryHealth = gary.health;
+            Console.WriteLine(GaryHealth);
+            // GaryHealth = spell2 - GaryHealth;
+
+
         }
     }
 }

@@ -13,6 +13,8 @@ namespace idk.character
         public string? Species;
         public string? magic;
         public CharacterStats Stats;
+
+        public int magicdm;
         public List<string> Spells;
 
 
@@ -26,6 +28,12 @@ namespace idk.character
         public Character AddMagic(string magicType)
         {
             Spells = CharacterBricks.Spells[magicType];
+            return this;
+        }
+
+        public Character MagicAttack(string dm)
+        {
+            magicdm = CharacterBricks.SpellDamage[dm];
             return this;
         }
     }
