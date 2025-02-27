@@ -11,17 +11,19 @@ namespace idk.Stories
     {
         //adding classes that I need for the story
         Gary gary = new();
+
+        //variables I need
         public string? name;
         public int health;
         public int mana;
-        public string spell1;
-        public string spell2;
-        public string spell3;
+        public string? spell1;
+        public string? spell2;
+        public string? spell3;
 
         public string playerCh = $"Wizards/Wizard-Ika";
 
 
-        public void ReadHp()
+        public void Readstats()
         {
             string[] player = File.ReadAllLines(playerCh);
 
