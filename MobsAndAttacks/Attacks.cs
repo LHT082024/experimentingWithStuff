@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace idk.mobs
+namespace idk.MobsAndAttacks
 {
-    public class TestMob
+    public class Attacks
     {
+        //local variables
         public int health;
         public int damage = 2;
         public string playerCh = $"Wizards/Wizard-Ika";
 
 
+        //readPlayerHealthPoints
         public void ReadHp()
         {
             string[] player = File.ReadAllLines(playerCh);
@@ -37,11 +39,8 @@ namespace idk.mobs
                 }
             }
         }
-        public void printshit()
-        {
-            Console.WriteLine($"your current health {health}");
-        }
 
+        //the first attack
         public void Basicattack()
         {
             int Basicattack = 4;
@@ -58,16 +57,9 @@ namespace idk.mobs
             }
         }
 
-        public void SaveStats()
-        {
-            string[] player = File.ReadAllLines(playerCh);
-            for (int i = 0; i < player.Length; i++) // Loop through each line
-            {
-                player[i] = player[i].Replace("Health: 10", $"Health: {health}");
-            }
 
-            File.WriteAllLines(playerCh, player);
-        }
+
+
+
     }
-
 }
