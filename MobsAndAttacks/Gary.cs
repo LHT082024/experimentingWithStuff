@@ -13,8 +13,7 @@ namespace idk.MobsAndAttacks
         //Gary's attacks
         public void attacks()
         {
-            damageAttacks.Basicattack();
-            damageAttacks.FireBall();
+
         }
 
     }
