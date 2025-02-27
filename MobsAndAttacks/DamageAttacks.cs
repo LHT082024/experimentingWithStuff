@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace idk.MobsAndAttacks
 {
-    public class Attacks
+    public class DamageAttacks
     {
         //local variables
         public int health;
@@ -40,7 +40,7 @@ namespace idk.MobsAndAttacks
             }
         }
 
-        //the first attack
+        //the basic attack
         public void Basicattack()
         {
             int Basicattack = 2;
@@ -49,7 +49,8 @@ namespace idk.MobsAndAttacks
 
             if (health > 0)
             {
-                Console.WriteLine($"Goblin slashed at you with it's sword your current hitpoints are {health}");
+                Console.WriteLine($"With a quick motion you are slashed with a knife doing {Basicattack} damage");
+                Console.WriteLine($"Your current health is{health}");
             }
             else if (health <= 0)
             {
@@ -57,6 +58,7 @@ namespace idk.MobsAndAttacks
             }
         }
 
+        //fireball
         public void FireBall()
         {
             int FireBall = 5;
@@ -65,14 +67,12 @@ namespace idk.MobsAndAttacks
             if (health > 0)
             {
                 Console.WriteLine($"A massive sphere of fire explodes on impact and does\n{FireBall} damage");
-                Console.WriteLine($"Your current hp is{health}")
+                Console.WriteLine($"Your current hp is{health}");
             }
             else if (health <= 0)
             {
                 Console.WriteLine("The sphere explodes burning you to a crisp\nYou are dead");
             }
-
-
         }
 
 
