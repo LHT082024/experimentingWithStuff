@@ -9,7 +9,7 @@ namespace idk.MobsAndAttacks
     {
         //local variables
         public int health;
-        public int damage = 2;
+        public int damage;
         public string playerCh = $"Wizards/Wizard-Ika";
 
 
@@ -43,7 +43,7 @@ namespace idk.MobsAndAttacks
         //the first attack
         public void Basicattack()
         {
-            int Basicattack = 4;
+            int Basicattack = 2;
             damage = Basicattack;
             health = health - Basicattack;
 
@@ -55,6 +55,24 @@ namespace idk.MobsAndAttacks
             {
                 Console.WriteLine("Ha fucking noob died");
             }
+        }
+
+        public void FireBall()
+        {
+            int FireBall = 5;
+            health = health - FireBall;
+
+            if (health > 0)
+            {
+                Console.WriteLine($"A massive sphere of fire explodes on impact and does\n{FireBall} damage");
+                Console.WriteLine($"Your current hp is{health}")
+            }
+            else if (health <= 0)
+            {
+                Console.WriteLine("The sphere explodes burning you to a crisp\nYou are dead");
+            }
+
+
         }
 
 
