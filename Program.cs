@@ -18,6 +18,11 @@ class Program
 
         testMob.ReadHp();
         testMob.printshit();
+        testMob.Basicattack();
+        testMob.printshit();
+        testMob.Basicattack();
+        // testMob.SaveStats();
+        testMob.Basicattack();
 
     }
 }
