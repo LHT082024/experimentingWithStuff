@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace idk.MobsAndAttacks
 {
-    public class Gary
+    public class HumanMobs
     {
-        public Mob newGary = new Mob("Gary").AddSpeciesStats("Human");
+        public Mob Gary = new Mob("Gary").AddSpeciesStats("Human");
     }
 }

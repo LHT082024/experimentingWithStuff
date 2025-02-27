@@ -10,7 +10,7 @@ namespace idk.Stories
     public class GaryStoleYourLunch
     {
         //adding classes that I need for the story
-        Gary gary = new();
+        HumanMobs human = new();
 
 
         //variables I need
@@ -74,7 +74,8 @@ namespace idk.Stories
 
         public void Morning()
         {
-            Console.WriteLine(gary.newGary.Stuff.Hp);
+            int Garyhp = human.Gary.Stuff.Hp;
+            Console.WriteLine(Garyhp);
             // GaryHealth = gary.health;
             // Console.WriteLine($"Gary currently have {GaryHealth} hit points\nClick any button to throw an Eldritch sphere at Gary");
             // Console.ReadKey();
