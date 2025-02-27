@@ -18,7 +18,18 @@ namespace idk.MobsAndAttacks
         {
             Stuff = MobBricks.Stits[stats];
             return this;
+        }
 
+        public Mob AddAttacks(string attacks)
+        {
+            Attacks = MobBricks.ClassSpells[attacks];
+            return this;
+        }
+
+        public Mob AddAttack(string dm)
+        {
+            AttackDmg = MobBricks.AttackDamage[dm];
+            return this;
         }
     };
 }

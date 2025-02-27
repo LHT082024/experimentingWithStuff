@@ -74,8 +74,19 @@ namespace idk.Stories
 
         public void Morning()
         {
-            int Garyhp = human.Gary.Stuff.Hp;
-            Console.WriteLine(Garyhp);
+            //calling attacks
+            string fireball = human.Gary.Attacks[0];
+            string slash = human.Gary.Attacks[1];
+
+            //calling attack dmg
+            int fireballdmg = MobBricks.AttackDamage[human.Gary.Attacks[0]][0];
+            int slashdm = MobBricks.AttackDamage[human.Gary.Attacks[1]][0];
+
+            //printing
+            Console.WriteLine($"Attack 1 name: {fireball} Damage: {fireballdmg}");
+            Console.WriteLine($"Attack 2 name: {slash} Damage: {slashdm}");
+
+
             // GaryHealth = gary.health;
             // Console.WriteLine($"Gary currently have {GaryHealth} hit points\nClick any button to throw an Eldritch sphere at Gary");
             // Console.ReadKey();
