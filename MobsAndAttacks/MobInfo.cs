@@ -5,12 +5,9 @@ using System.Threading.Tasks;
 
 namespace idk.MobsAndAttacks
 {
-    public class DamageAttacks
+    public class MobInfo(int hp)
     {
-
-
-
-
+        public int Hp = hp;
 
 
     }
