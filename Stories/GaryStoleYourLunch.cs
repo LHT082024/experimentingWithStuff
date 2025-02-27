@@ -12,6 +12,7 @@ namespace idk.Stories
         //adding classes that I need for the story
         Gary gary = new();
 
+
         //variables I need
         public string name = "";
         public int playerhealth;
