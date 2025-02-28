@@ -95,6 +95,12 @@ namespace idk.Stories
 the castle and you are starting to think that maybe the noble that hired you to kill demons from hell was a bit paranoid Nevertheless it's time for lunch";
             for (int i = 0; i < start.Length; i++)
             {
+                if (Console.KeyAvailable)
+                {
+                    Console.ReadKey(true);  // Consume the key press
+                    Console.Write(start.Substring(i));  // Instantly print remaining text
+                    break;  // Exit the loop
+                }
                 Console.Write(start[i]);
                 Thread.Sleep(60);
             }
@@ -103,13 +109,13 @@ the castle and you are starting to think that maybe the noble that hired you to 
             int choice1Counter = 0;
             while (!firstChoice)
             {
-                Console.WriteLine("\nYou have two choices\n(1) Stare at the view hoping something interesting will happen\n(2) Go to the kitchen and get your lunch");
+                Console.WriteLine("You have two choices\n(1) Stare at the view hoping something interesting will happen\n(2) Go to the kitchen and get your lunch");
                 string playerInput = Console.ReadLine();
 
                 if (choice1Counter == 3)
                 {
-                    string death1 = @"Turns out that thing in the distance wasnt a bird it was an aincent dragon who seems very hungry, before you are able to utter a single spell it swoops down at you ripping off
-                    your body to pieces and swallowing it whole. Just because you didnt want lunch dosent mean the dragon dosent get lunch";
+                    string death1 = @"Turns out that thing in the distance wasnt a bird it was an aincent dragon who seems very hungry, before you are able to utter a single spell it swoops down at you ripping
+                    your body to pieces and swallowing it whole. Just because you didnt want lunch dosent mean the dragon dosent want lunch";
                     for (int i = 0; i < death1.Length; i++)
                     {
                         Console.Write(death1[i]);
@@ -143,6 +149,7 @@ the castle and you are starting to think that maybe the noble that hired you to 
                                 Console.Write(choice2[i]);
                                 Thread.Sleep(60);
                             }
+                            theKitchen();
                             firstChoice = true;
                             break;
 
@@ -154,6 +161,11 @@ the castle and you are starting to think that maybe the noble that hired you to 
                 }
 
             }
+        }
+
+        public void theKitchen()
+        {
+
         }
 
         public void gameOVer()
