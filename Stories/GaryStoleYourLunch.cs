@@ -9,6 +9,7 @@ namespace idk.Stories
 {
     public class GaryStoleYourLunch
     {
+        public string playerInput = Console.ReadLine().ToLower();
         //adding classes that I need for the story
         HumanMobs human = new();
         public string MobName = "";
@@ -100,7 +101,15 @@ the castle and you are starting to think that maybe the noble that hired you to 
             }
             Console.WriteLine("what do you want to do?\n(1) Stare at the view hoping something interesting will happen\n(2) Go to the kitchen and get your lunch");
 
-        }
+            bool firstChoice = false;
+
+
+            while (firstChoice)
+            {
+                switch
+            }
+
+            }
 
         public void combat()
         { }
