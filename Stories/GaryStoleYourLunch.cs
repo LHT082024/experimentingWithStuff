@@ -113,9 +113,9 @@ the castle and you are starting to think that maybe the noble that hired you to 
                 {
                     string death1 = @"Turns out that thing in the distance wasnt a bird it was an aincent dragon who seems very hungry, before you are able to utter a single spell it swoops down at you ripping off
                     your body to pieces and swallowing it whole. Just because you didnt want lunch dosent mean the dragon dosent get lunch";
-                    for (int i = 0; i < start.Length; i++)
+                    for (int i = 0; i < death1.Length; i++)
                     {
-                        Console.Write(start[i]);
+                        Console.Write(death1[i]);
                         Thread.Sleep(60);
                     }
 
