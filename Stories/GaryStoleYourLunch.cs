@@ -85,11 +85,21 @@ namespace idk.Stories
             fireballdmg = MobBricks.AttackDamage[human.Gary.Attacks[0]][0];
             slashdmg = MobBricks.AttackDamage[human.Gary.Attacks[1]][0];
         }
+
+        public void Intro()
+        { }
         public void Morning()
         {
             //printing
-            Console.WriteLine($"Attack 1 name: {fireball} Damage: {fireballdmg}");
-            Console.WriteLine($"Attack 2 name: {slash} Damage: {slashdmg}");
+            string start = @"it's a wonderful morning, you are standing on top of a castle wall enjoying the view It's been a quiet morning guarding 
+the castle and you are starting to think that maybe the noble that hired you to kill demons from hell was a bit paranoid Nevertheless it's time for lunch";
+            for (int i = 0; i < start.Length; i++)
+            {
+                Console.Write(start[i]);
+                Thread.Sleep(60);
+            }
+            Console.WriteLine("what do you want to do?\n(1) Stare at the view hoping something interesting will happen\n(2) Go to the kitchen and get your lunch");
+
         }
 
         public void combat()
