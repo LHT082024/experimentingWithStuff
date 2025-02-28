@@ -98,11 +98,8 @@ the castle and you are starting to think that maybe the noble that hired you to 
                 Console.Write(start[i]);
                 Thread.Sleep(60);
             }
-            Console.WriteLine("\nYou have two choices\n(1) Stare at the view hoping something interesting will happen\n(2) Go to the kitchen and get your lunch");
 
             bool firstChoice = false;
-
-
             int choice1Counter = 0;
             while (!firstChoice)
             {
@@ -148,7 +145,6 @@ the castle and you are starting to think that maybe the noble that hired you to 
                             }
                             firstChoice = true;
                             break;
-
 
                         default:
                             Console.WriteLine("invalid choice please pick\n1\nor\n2");
