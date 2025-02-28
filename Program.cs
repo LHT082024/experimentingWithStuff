@@ -25,7 +25,8 @@ class Program
         // testMob.Basicattack();
         // // testMob.SaveStats();
         // testMob.Basicattack();
-        garyStoleYourLunch.Readstats();
+        garyStoleYourLunch.ReadPlayerStats();
+        garyStoleYourLunch.mobStats();
         garyStoleYourLunch.Morning();
     }
 }

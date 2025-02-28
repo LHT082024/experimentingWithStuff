@@ -82,30 +82,14 @@ namespace idk.Stories
         {
             fireball = human.Gary.Attacks[0];
             slash = human.Gary.Attacks[1];
+            fireballdmg = MobBricks.AttackDamage[human.Gary.Attacks[0]][0];
+            slashdmg = MobBricks.AttackDamage[human.Gary.Attacks[1]][0];
         }
         public void Morning()
         {
-            //calling attacks
-
-
-            //calling attack dmg
-            int fireballdmg = MobBricks.AttackDamage[human.Gary.Attacks[0]][0];
-            int slashdm = MobBricks.AttackDamage[human.Gary.Attacks[1]][0];
-
             //printing
             Console.WriteLine($"Attack 1 name: {fireball} Damage: {fireballdmg}");
-            Console.WriteLine($"Attack 2 name: {slash} Damage: {slashdm}");
-
-
-            // GaryHealth = gary.health;
-            // Console.WriteLine($"Gary currently have {GaryHealth} hit points\nClick any button to throw an Eldritch sphere at Gary");
-            // Console.ReadKey();
-            // GaryHealth = GaryHealth - damage2;
-            // Console.WriteLine($"Gary's health after the eldritch sphere is {GaryHealth}\nYou almost killed him you monster");
-            // Console.ReadKey();
-            // Console.WriteLine($"your health is {playerhealth}, gary wants revenge so he fires a fireball.");
-            // gary.attacks();
-            // Console.WriteLine($"your health is now{playerhealth}");
+            Console.WriteLine($"Attack 2 name: {slash} Damage: {slashdmg}");
         }
 
         public void combat()
