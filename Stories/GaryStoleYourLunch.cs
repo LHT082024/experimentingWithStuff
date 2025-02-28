@@ -122,7 +122,7 @@ the castle and you are starting to think that maybe the noble that hired you to 
                         Thread.Sleep(60);
                     }
 
-                    gameOVer();
+                    GameOVer();
                     firstChoice = true;
                 }
                 else
@@ -149,7 +149,7 @@ the castle and you are starting to think that maybe the noble that hired you to 
                                 Console.Write(choice2[i]);
                                 Thread.Sleep(60);
                             }
-                            theKitchen();
+                            TheKitchen();
                             firstChoice = true;
                             break;
 
@@ -163,12 +163,27 @@ the castle and you are starting to think that maybe the noble that hired you to 
             }
         }
 
-        public void theKitchen()
+        public void TheKitchen()
         {
+            string kitchenOpening = @"Entering the castle Kitchen you see the same room you have been eating in for the past three days. It's a large rectangular room made out of stone. 
+            there are a row of tall glass windows on the wall opposite of the entrance wall where tables are pushed against. There is a large fireplace for the winter cold in the middle and right next to the door is a set of
+            refrigirators where everyone (except the lord) stores his lunch";
+
+            for (int i = 0; i < kitchenOpening.Length; i++)
+            {
+                if (Console.KeyAvailable)
+                {
+                    Console.ReadKey(true);  // Consume the key press
+                    Console.Write(kitchenOpening.Substring(i));  // Instantly print remaining text
+                    break;  // Exit the loop
+                }
+                Console.Write(kitchenOpening[i]);
+                Thread.Sleep(60);
+            }
 
         }
 
-        public void gameOVer()
+        public void GameOVer()
         {
             Console.WriteLine("You are dead\n Game over");
         }
