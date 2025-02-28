@@ -9,7 +9,6 @@ namespace idk.Stories
 {
     public class GaryStoleYourLunch
     {
-        public string playerInput = Console.ReadLine().ToLower();
         //adding classes that I need for the story
         HumanMobs human = new();
         public string MobName = "";
@@ -99,19 +98,71 @@ the castle and you are starting to think that maybe the noble that hired you to 
                 Console.Write(start[i]);
                 Thread.Sleep(60);
             }
-            Console.WriteLine("what do you want to do?\n(1) Stare at the view hoping something interesting will happen\n(2) Go to the kitchen and get your lunch");
+            Console.WriteLine("\nYou have two choices\n(1) Stare at the view hoping something interesting will happen\n(2) Go to the kitchen and get your lunch");
 
             bool firstChoice = false;
 
 
-            while (firstChoice)
+            while (!firstChoice)
             {
-                switch
-            }
+                Console.WriteLine("\nYou have two choices\n(1) Stare at the view hoping something interesting will happen\n(2) Go to the kitchen and get your lunch");
+                string playerInput = Console.ReadLine();
+                int choice1Counter = 0;
+
+                if (choice1Counter == 3)
+                {
+                    string death1 = @"Turns out that thing in the distance wasnt a bird it was an aincent dragon who seems very hungry, before you are able to utter a single spell it swoops down at you ripping off
+                    your body to pieces and swallowing it whole. Just because you didnt want lunch dosent mean the dragon dosent get lunch";
+                    for (int i = 0; i < start.Length; i++)
+                    {
+                        Console.Write(start[i]);
+                        Thread.Sleep(60);
+                    }
+
+                    gameOVer();
+                }
+                else
+                {
+                    switch (playerInput)
+                    {
+                        case "1":
+                            string choice1 = "You stare at the view from the castle wall\n You watch the mountains, the river, the forest you see something flying in the distance probably a bird";
+                            for (int i = 0; i < choice1.Length; i++)
+                            {
+                                Console.Write(choice1[i]);
+                                Thread.Sleep(60);
+                            }
+                            choice1Counter += 1;
+                            firstChoice = false;
+                            break;
+
+
+
+                        case "2":
+                            string choice2 = "You walk down the shittly made castle stairs that are way to narrow and should defintly be upgraded but if they have lasted for 500 years why care";
+                            for (int i = 0; i < choice2.Length; i++)
+                            {
+                                Console.Write(choice2[i]);
+                                Thread.Sleep(60);
+                            }
+                            firstChoice = true;
+                            break;
+
+
+                        default:
+                            Console.WriteLine("invalid choice please pick\n1\nor\n2");
+                            break;
+                    }
+
+                }
 
             }
+        }
 
-        public void combat()
-        { }
+        public void gameOVer()
+        {
+            Console.WriteLine("You are dead\n Game over");
+        }
+
     }
 }

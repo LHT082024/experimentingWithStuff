@@ -18,15 +18,9 @@ class Program
         // // intros.PlaneIsekaiIntro();
         // creatingCharacter.CharacterCreation();
 
-        // testMob.ReadHp();
-        // testMob.printshit();
-        // testMob.Basicattack();
-        // testMob.printshit();
-        // testMob.Basicattack();
-        // // testMob.SaveStats();
-        // testMob.Basicattack();
-        garyStoleYourLunch.ReadPlayerStats();
-        garyStoleYourLunch.mobStats();
+
+        // garyStoleYourLunch.ReadPlayerStats();
+        // garyStoleYourLunch.mobStats();
         garyStoleYourLunch.Morning();
     }
 }
