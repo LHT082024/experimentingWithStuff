@@ -11,9 +11,13 @@ namespace idk.Stories
     {
         //adding classes that I need for the story
         HumanMobs human = new();
+        public string MobName = "";
+        public string fireball;
+        public string slash;
+        public int fireballdmg;
+        public int slashdmg;
 
-
-        //variables I need
+        //player variables
         public string name = "";
         public int playerhealth;
         public int GaryHealth;
@@ -27,7 +31,7 @@ namespace idk.Stories
 
 
         //reading stats and assigning them to local variables
-        public void Readstats()
+        public void ReadPlayerStats()
         {
             string[] player = File.ReadAllLines(playerCh);
 
@@ -72,11 +76,17 @@ namespace idk.Stories
             }
         }
 
+
+        //assigning mobstats to variables
+        public void mobStats()
+        {
+            fireball = human.Gary.Attacks[0];
+            slash = human.Gary.Attacks[1];
+        }
         public void Morning()
         {
             //calling attacks
-            string fireball = human.Gary.Attacks[0];
-            string slash = human.Gary.Attacks[1];
+
 
             //calling attack dmg
             int fireballdmg = MobBricks.AttackDamage[human.Gary.Attacks[0]][0];
@@ -97,5 +107,8 @@ namespace idk.Stories
             // gary.attacks();
             // Console.WriteLine($"your health is now{playerhealth}");
         }
+
+        public void combat()
+        { }
     }
 }
