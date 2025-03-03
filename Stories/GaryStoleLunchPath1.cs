@@ -17,8 +17,9 @@ namespace experimentingWithStuff.Stories
         }
         public void theEscape()
         {
-            string start = @"The alarm bell is ringing. You hear multiple footsteps approach you. The lord of the castle has at least ten guards. You could try to fight them all in the kitchen
-            but that might not be such a good idea as it could be deadly. You could also jump out of the massive hole you just created in the castle wall and try to run.";
+            string start = $@"The alarm bell is ringing. You hear multiple footsteps approach you. The lord of the castle had ten soldiers for protection, you and....Gary... 
+            You quickly turn around and you see Gary(the second wizard hired to protect the lord of the castle) running out the backdoor holding a {_basic.playerLunch}. You could run after him,
+            you could instead focus on the guards that's apporaching you or You could escape the kitchen by jumping out of the massive hole you created in its wall.";
             for (int i = 0; i < start.Length; i++)
             {
                 if (Console.KeyAvailable)
@@ -31,7 +32,7 @@ namespace experimentingWithStuff.Stories
                 Thread.Sleep(60);
             }
             Console.WriteLine("what will you do?");
-            Console.WriteLine("(1): stay in the kitchen and fight\n(2): Jump out of the newly created 'door'");
+            Console.WriteLine("(1): stay in the kitchen and fight\n(2): Jump out of the newly created 'door'\n(3): go after Gary");
         }
     }
 }

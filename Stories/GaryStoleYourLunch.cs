@@ -245,6 +245,11 @@ refrigirators where everyone (except the lord) stores their lunch. You open the 
                             garyStoleLunchPath1.theEscape();
                         }
                         break;
+
+
+                    default:
+                        Console.WriteLine("invalid choice please pick\n1\n2\nor 3");
+                        break;
                 }
             }
         }
