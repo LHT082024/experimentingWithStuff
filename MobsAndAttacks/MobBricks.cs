@@ -33,12 +33,19 @@ namespace idk.MobsAndAttacks
                 {
                     "Wizard",
                     ["fireball", "slash"]
+                },
+
+                {
+                    "Soldier",
+                    ["stab", "slash"]
+
                 }
             };
         public static readonly Dictionary<string, List<int>> AttackDamage = new()
         {
              { "fireball", new List<int> { 4 } },
-             { "slash", new List<int> { 2 } }
+             { "slash", new List<int> { 2 } },
+             {"stab", new List<int> {4} }
         };
     }
 }

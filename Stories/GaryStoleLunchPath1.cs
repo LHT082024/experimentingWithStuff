@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using idk.MobsAndAttacks;
 using idk.Stories;
 
 namespace experimentingWithStuff.Stories
@@ -11,6 +12,7 @@ namespace experimentingWithStuff.Stories
         //takes the instance from current gary stole your lunch and give me
         //the ability to use the variables modified in garystoleyourlunch class
         private readonly GaryStoleYourLunch _basic;
+        HumanMobs humanMobs = new();
 
         public GaryStoleLunchPath1(GaryStoleYourLunch basic)
         {
@@ -18,18 +20,26 @@ namespace experimentingWithStuff.Stories
 
         }
 
-        public string? soldier1Name = "";
-        public string? soldier2Name = "";
-        public string? soldier3Name = "";
-        public string? soldier4Name = "";
-        public string? soldier5Name = "";
-        public string? soldier6Name = "";
-        public string? soldier7Name = "";
-        public string? soldier8Name = "";
-        public string? soldier9Name = "";
-        public string? soldier10Name = "";
-        public string soldierAttack1 = "";
-        public int soliderAttackDmg;
+        public void Soldiers()
+        {
+            int soldier1health = humanMobs.Soldier1.Stuff.Hp;
+            int soldier2health = humanMobs.Soldier1.Stuff.Hp;
+            int soldier3health = humanMobs.Soldier1.Stuff.Hp;
+            int soldier4health = humanMobs.Soldier1.Stuff.Hp;
+            int soldier5health = humanMobs.Soldier1.Stuff.Hp;
+            int soldier6health = humanMobs.Soldier1.Stuff.Hp;
+            int soldier7health = humanMobs.Soldier1.Stuff.Hp;
+            int soldier8health = humanMobs.Soldier1.Stuff.Hp;
+            int soldier9health = humanMobs.Soldier1.Stuff.Hp;
+            int soldier10health = humanMobs.Soldier1.Stuff.Hp;
+
+            string soldierAttack1 = humanMobs.Soldier1.Attacks[0];
+            string soldierAttack2 = humanMobs.Soldier1.Attacks[0];
+            int slashdmgS = humanMobs.Soldier1.Attacks[0][0];
+            int stabdmgS = humanMobs.Soldier1.Attacks[1][0];
+
+        }
+
 
 
         //starts of this path in the adventure
@@ -86,7 +96,22 @@ namespace experimentingWithStuff.Stories
 
         public void FightingTenMen()
         {
-            Console.WriteLine("ten Men");
+            Console.WriteLine("You have ten men surronding you armed with swords and lightly armoured");
+            Console.ReadKey();
+            Console.WriteLine("What do you want to do?");
+            Console.WriteLine($"(1): don't wanna fight after all try to run through them\n(2): {_basic.spell2}\n(3): Tell them the castle was halfbroken when you got there");
+
+            bool tenMen = false;
+            while (!tenMen)
+            {
+                _basic.playerInput = Console.ReadLine();
+                switch (_basic.playerInput)
+                {
+                    case "1":
+                        Console.WriteLine("this was obviusly a very bad idea. So you decide to run through them but they are to close togheter");
+                        Console.WriteLine($"five soldiers use {}")
+                }
+            }
 
         }
 

@@ -21,6 +21,7 @@ class Program
         // garyStoleYourLunch.Morning();
         // garyStoleYourLunch.TheKitchen();
         garyStoleLunchPath1.theEscape();
+        garyStoleLunchPath1.Soldiers();
         // garyStoleLunchPath1.FightingTenMen();
         // garyStoleLunchPath1.Courtyard();
         // garyStoleLunchPath1.ConfrontingGary();
