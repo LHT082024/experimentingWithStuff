@@ -26,8 +26,8 @@ namespace idk.Stories
         public string? spell2;
         public int damage2;
         public string? spell3;
-
-        public string playerLunch;
+        public string? playerInput;
+        public string? playerLunch;
 
         public string playerCh = $"Wizards/Wizard-Ika";
 
@@ -93,7 +93,7 @@ namespace idk.Stories
         {
             Console.WriteLine("Ello player. This is the story about you and Gart <3\n But before we can begin your amazing story tell me");
             Console.WriteLine("what is your favourite food? (note it has to be a fooditem with 11 characters or less)");
-            playerLunch = Console.ReadLine();
+            playerLunch = Console.ReadLine().ToLower();
 
             bool isLunchRight = false;
             while (!isLunchRight)
@@ -108,7 +108,7 @@ namespace idk.Stories
                 }
                 else
                 {
-                    Console.WriteLine($"your lunch today is{playerLunch}\n click any button to continue");
+                    Console.WriteLine($"your lunch today is{playerLunch}\nclick any button to continue");
                     isLunchRight = true;
                     Console.ReadKey();
                 }
@@ -120,10 +120,7 @@ namespace idk.Stories
             }
         }
 
-        public void playerLunching()
-        {
-            Console.WriteLine(playerLunch);
-        }
+        //pt1
         public void Morning()
         {
             //printing
@@ -146,7 +143,7 @@ the castle and you are starting to think that maybe the noble that hired you to 
             while (!firstChoice)
             {
                 Console.WriteLine("You have two choices\n(1) Stare at the view hoping something interesting will happen\n(2) Go to the kitchen and get your lunch");
-                string playerInput = Console.ReadLine();
+                playerInput = Console.ReadLine();
 
                 if (choice1Counter == 3)
                 {
@@ -201,9 +198,9 @@ the castle and you are starting to think that maybe the noble that hired you to 
 
         public void TheKitchen()
         {
-            string kitchenOpening = @"Entering the castle Kitchen you see the same room you have been eating in for the past three days. It's a large rectangular room made out of stone. 
-            there are a row of tall glass windows on the wall opposite of the entrance wall where tables are pushed against. There is a large fireplace for the winter cold in the middle and right next to the door is a set of
-            refrigirators where everyone (except the lord) stores their lunch. You open the fridge and looks inside and sees that";
+            string kitchenOpening = $@"Entering the castle Kitchen you see the same room you have been eating in for the past three days. It's a large rectangular room made out of stone. 
+there are a row of tall glass windows on the wall opposite of the entrance wall where tables are pushed against. There is a large fireplace for the winter cold in the middle and right next to the door is a set of
+refrigirators where everyone (except the lord) stores their lunch. You open the fridge and looks inside and sees that your delicous{playerLunch} IS GONE!!";
 
             for (int i = 0; i < kitchenOpening.Length; i++)
             {
@@ -215,6 +212,37 @@ the castle and you are starting to think that maybe the noble that hired you to 
                 }
                 Console.Write(kitchenOpening[i]);
                 Thread.Sleep(60);
+            }
+            Console.WriteLine("\nWhat do you want to do?");
+            Console.WriteLine($"(1): curse\n(2): look around the room\n(3): cast {spell2}");
+            playerInput = Console.ReadLine();
+
+
+            bool kitchen1 = false;
+            while (!kitchen1)
+            {
+                switch (playerInput)
+                {
+                    case "1":
+                        Console.WriteLine("#¤&#!%&");
+                        Console.WriteLine("You feel a little better after cursing");
+                        break;
+
+                    case "2":
+                        Console.WriteLine($"You look around the room and scan the tables and see that in the corner sits your coworker Gary eating a{playerLunch}");
+                        kitchen1 = true;
+                        break;
+
+                    case "3":
+                        if (spell2 == "sphere of destruction")
+                        {
+                            Console.WriteLine(@"A sphere of black and pink light is conjured in your hand as your rage grows larger so does the sphere 
+                        you toss it into the fridge making a large bang blowing up half the building");
+                            kitchen1 = true;
+                        }
+                        break;
+
+                }
             }
 
         }
