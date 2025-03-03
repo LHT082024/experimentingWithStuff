@@ -21,6 +21,8 @@ class Program
 
         // garyStoleYourLunch.ReadPlayerStats();
         // garyStoleYourLunch.mobStats();
-        garyStoleYourLunch.Morning();
+        // garyStoleYourLunch.Morning();
+        garyStoleYourLunch.Intro();
+        garyStoleYourLunch.playerLunching();
     }
 }

@@ -112,7 +112,17 @@ namespace idk.Stories
                     isLunchRight = true;
                     Console.ReadKey();
                 }
+                if (!isLunchRight)
+                {
+                    Console.WriteLine("what is your favourite food? (note it has to be a fooditem with 11 characters or less)");
+                    playerLunch = Console.ReadLine();
+                }
             }
+        }
+
+        public void playerLunching()
+        {
+            Console.WriteLine(playerLunch);
         }
         public void Morning()
         {
