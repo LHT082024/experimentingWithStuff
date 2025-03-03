@@ -27,6 +27,8 @@ namespace idk.Stories
         public int damage2;
         public string? spell3;
 
+        public string playerLunch;
+
         public string playerCh = $"Wizards/Wizard-Ika";
 
 
@@ -87,7 +89,12 @@ namespace idk.Stories
         }
 
         public void Intro()
-        { }
+        {
+            Console.WriteLine("Ello player. This is the story about you and Gart <3\n But before we can begin your amazing story tell me");
+            Console.WriteLine("what is your favourite food?");
+            playerLunch = Console.ReadLine();
+            if ()
+        }
         public void Morning()
         {
             //printing
@@ -97,7 +104,7 @@ the castle and you are starting to think that maybe the noble that hired you to 
             {
                 if (Console.KeyAvailable)
                 {
-                    Console.ReadKey(true);  // Consume the key press
+                    Console.ReadKey(true);
                     Console.Write(start.Substring(i));  // Instantly print remaining text
                     break;  // Exit the loop
                 }
@@ -167,7 +174,7 @@ the castle and you are starting to think that maybe the noble that hired you to 
         {
             string kitchenOpening = @"Entering the castle Kitchen you see the same room you have been eating in for the past three days. It's a large rectangular room made out of stone. 
             there are a row of tall glass windows on the wall opposite of the entrance wall where tables are pushed against. There is a large fireplace for the winter cold in the middle and right next to the door is a set of
-            refrigirators where everyone (except the lord) stores their lunch";
+            refrigirators where everyone (except the lord) stores their lunch. You open the fridge and looks inside and sees that";
 
             for (int i = 0; i < kitchenOpening.Length; i++)
             {
