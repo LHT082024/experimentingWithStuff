@@ -19,25 +19,40 @@ namespace experimentingWithStuff.Stories
             _basic = basic;
 
         }
+        public int soldier1health;
+        public int soldier2health;
+        public int soldier3health;
+        public int soldier4health;
+        public int soldier5health;
+        public int soldier6health;
+        public int soldier7health;
+        public int soldier8health;
+        public int soldier9health;
+        public int soldier10health;
+        public string soldierAttack1;
+        public string soldierAttack2;
+        public int slashdmgS;
+        int stabdmgS;
+
+
 
         public void Soldiers()
         {
-            int soldier1health = humanMobs.Soldier1.Stuff.Hp;
-            int soldier2health = humanMobs.Soldier1.Stuff.Hp;
-            int soldier3health = humanMobs.Soldier1.Stuff.Hp;
-            int soldier4health = humanMobs.Soldier1.Stuff.Hp;
-            int soldier5health = humanMobs.Soldier1.Stuff.Hp;
-            int soldier6health = humanMobs.Soldier1.Stuff.Hp;
-            int soldier7health = humanMobs.Soldier1.Stuff.Hp;
-            int soldier8health = humanMobs.Soldier1.Stuff.Hp;
-            int soldier9health = humanMobs.Soldier1.Stuff.Hp;
-            int soldier10health = humanMobs.Soldier1.Stuff.Hp;
+            soldier1health = humanMobs.Soldier1.Stuff.Hp;
+            soldier2health = humanMobs.Soldier1.Stuff.Hp;
+            soldier3health = humanMobs.Soldier1.Stuff.Hp;
+            soldier4health = humanMobs.Soldier1.Stuff.Hp;
+            soldier5health = humanMobs.Soldier1.Stuff.Hp;
+            soldier6health = humanMobs.Soldier1.Stuff.Hp;
+            soldier7health = humanMobs.Soldier1.Stuff.Hp;
+            soldier8health = humanMobs.Soldier1.Stuff.Hp;
+            soldier9health = humanMobs.Soldier1.Stuff.Hp;
+            soldier10health = humanMobs.Soldier1.Stuff.Hp;
 
-            string soldierAttack1 = humanMobs.Soldier1.Attacks[0];
-            string soldierAttack2 = humanMobs.Soldier1.Attacks[0];
-            int slashdmgS = humanMobs.Soldier1.Attacks[0][0];
-            int stabdmgS = humanMobs.Soldier1.Attacks[1][0];
-
+            soldierAttack1 = humanMobs.Soldier1.Attacks[0];
+            soldierAttack2 = humanMobs.Soldier1.Attacks[0];
+            slashdmgS = humanMobs.Soldier1.Attacks[0][0];
+            stabdmgS = humanMobs.Soldier1.Attacks[1][0];
         }
 
 
