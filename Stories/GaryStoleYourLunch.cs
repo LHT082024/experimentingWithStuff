@@ -88,12 +88,31 @@ namespace idk.Stories
             slashdmg = MobBricks.AttackDamage[human.Gary.Attacks[1]][0];
         }
 
+        //the intro for  the story where the player can choose their lunch
         public void Intro()
         {
             Console.WriteLine("Ello player. This is the story about you and Gart <3\n But before we can begin your amazing story tell me");
-            Console.WriteLine("what is your favourite food?");
+            Console.WriteLine("what is your favourite food? (note it has to be a fooditem with 11 characters or less)");
             playerLunch = Console.ReadLine();
-            if ()
+
+            bool isLunchRight = false;
+            while (!isLunchRight)
+            {
+                if (string.IsNullOrWhiteSpace(playerLunch))
+                {
+                    Console.WriteLine("You have to have an actual lunch!");
+                }
+                else if (playerLunch.Length > 11)
+                {
+                    Console.WriteLine("Pretty sure I told you it was not supposed to be longer then 11 characters");
+                }
+                else
+                {
+                    Console.WriteLine($"your lunch today is{playerLunch}\n click any button to continue");
+                    isLunchRight = true;
+                    Console.ReadKey();
+                }
+            }
         }
         public void Morning()
         {
