@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using experimentingWithStuff.Stories;
 using idk.character;
 using idk.MobsAndAttacks;
 
@@ -9,6 +10,8 @@ namespace idk.Stories
 {
     public class GaryStoleYourLunch
     {
+        GaryStoleLunchPath1 garyStoleLunchPath1;
+
         //adding classes that I need for the story
         HumanMobs human = new();
         public string MobName = "";
@@ -239,12 +242,11 @@ refrigirators where everyone (except the lord) stores their lunch. You open the 
                             Console.WriteLine(@"A sphere of black and pink light is conjured in your hand as your rage grows larger so does the sphere 
                         you toss it into the fridge making a large bang blowing up half the building");
                             kitchen1 = true;
+                            garyStoleLunchPath1.theEscape();
                         }
                         break;
-
                 }
             }
-
         }
 
         public void GameOVer()

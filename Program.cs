@@ -19,8 +19,8 @@ class Program
         garyStoleYourLunch.ReadPlayerStats();
         // garyStoleYourLunch.mobStats();
         // garyStoleYourLunch.Morning();
-        garyStoleLunchPath1.testing();
         // garyStoleYourLunch.TheKitchen();
+        garyStoleLunchPath1.theEscape();
 
     }
 }
