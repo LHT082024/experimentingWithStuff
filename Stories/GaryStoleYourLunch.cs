@@ -114,7 +114,7 @@ namespace idk.Stories
                 }
                 if (!isLunchRight)
                 {
-                    Console.WriteLine("what is your favourite food? (note it has to be a fooditem with 11 characters or less)");
+                    Console.WriteLine("\nwhat is your favourite food? (note it has to be a fooditem with 11 characters or less)");
                     playerLunch = Console.ReadLine();
                 }
             }
