@@ -167,7 +167,7 @@ the castle and you are starting to think that maybe the noble that hired you to 
         {
             string kitchenOpening = @"Entering the castle Kitchen you see the same room you have been eating in for the past three days. It's a large rectangular room made out of stone. 
             there are a row of tall glass windows on the wall opposite of the entrance wall where tables are pushed against. There is a large fireplace for the winter cold in the middle and right next to the door is a set of
-            refrigirators where everyone (except the lord) stores his lunch";
+            refrigirators where everyone (except the lord) stores their lunch";
 
             for (int i = 0; i < kitchenOpening.Length; i++)
             {
