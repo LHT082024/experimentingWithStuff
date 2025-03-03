@@ -19,6 +19,7 @@ namespace experimentingWithStuff.Stories
             _basic = basic;
 
         }
+        public int newPlayerHealth;
         public int soldier1health;
         public int soldier2health;
         public int soldier3health;
@@ -38,6 +39,7 @@ namespace experimentingWithStuff.Stories
 
         public void Soldiers()
         {
+
             soldier1health = humanMobs.Soldier1.Stuff.Hp;
             soldier2health = humanMobs.Soldier1.Stuff.Hp;
             soldier3health = humanMobs.Soldier1.Stuff.Hp;
@@ -53,6 +55,8 @@ namespace experimentingWithStuff.Stories
             soldierAttack2 = humanMobs.Soldier1.Attacks[0];
             slashdmgS = humanMobs.Soldier1.Attacks[0][0];
             stabdmgS = humanMobs.Soldier1.Attacks[1][0];
+
+            // Console.WriteLine(soldierAttack1);
         }
 
 
@@ -114,7 +118,7 @@ namespace experimentingWithStuff.Stories
             Console.WriteLine("You have ten men surronding you armed with swords and lightly armoured");
             Console.ReadKey();
             Console.WriteLine("What do you want to do?");
-            Console.WriteLine($"(1): don't wanna fight after all try to run through them\n(2): {_basic.spell2}\n(3): Tell them the castle was halfbroken when you got there");
+            Console.WriteLine($"\n(1): don't wanna fight after all try to run through them\n(2): {_basic.spell2}\n(3): Tell them the castle was halfbroken when you got there");
 
             bool tenMen = false;
             while (!tenMen)
@@ -124,7 +128,41 @@ namespace experimentingWithStuff.Stories
                 {
                     case "1":
                         Console.WriteLine("this was obviusly a very bad idea. So you decide to run through them but they are to close togheter");
-                        Console.WriteLine($"five soldiers use {}")
+                        Console.WriteLine($"five soldiers use {soldierAttack1}");
+                        newPlayerHealth = _basic.playerhealth - slashdmgS;
+                        newPlayerHealth = _basic.playerhealth -= slashdmgS;
+                        newPlayerHealth = _basic.playerhealth -= slashdmgS;
+                        newPlayerHealth = _basic.playerhealth -= slashdmgS;
+                        newPlayerHealth = _basic.playerhealth -= slashdmgS;
+
+                        if (newPlayerHealth > 0)
+                        {
+                            Console.WriteLine("The soldiers look at you horrified as you stand there still alive");
+                            Console.WriteLine("To terrified to do anything else the soldiers let you past them");
+                            tenMen = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("not suprising get slashed by multiple soldiers multiple times you end up falling dead on the spot");
+                            _basic.GameOVer();
+                            tenMen = true;
+                        }
+                        break;
+
+                    case "2":
+                        Console.WriteLine("Another sphere of black and pink lighting forms in your hand and you toss it into the soldiers in front of you");
+                        soldier1health = soldier1health - _basic.damage2;
+                        soldier2health = soldier2health - _basic.damage2;
+                        soldier3health = soldier3health - _basic.damage2;
+                        soldier4health = soldier4health - _basic.damage2;
+                        foreach (int soldier in Soldiers)
+                        {
+
+                        }
+
+                        //print every soldier with 0 hp
+
+
                 }
             }
 

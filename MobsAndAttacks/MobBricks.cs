@@ -16,7 +16,7 @@ namespace idk.MobsAndAttacks
             {
                 {
                     "Human",
-                    new(7)
+                    new(6)
                 },
                 {
                     "Goblin",
