@@ -17,7 +17,8 @@ namespace experimentingWithStuff.Stories
         }
         public void theEscape()
         {
-            string start
+            string start = @"The alarm bell is ringing. You hear multiple footsteps approach you. The lord of the castle has at least ten guards. You could try to fight them all in the kitchen
+            but that might not be such a good idea as it could be deadly. You could also jump out of the massive hole you just created in the castle wall and try to run.";
             for (int i = 0; i < start.Length; i++)
             {
                 if (Console.KeyAvailable)
@@ -29,8 +30,8 @@ namespace experimentingWithStuff.Stories
                 Console.Write(start[i]);
                 Thread.Sleep(60);
             }
-
-            Console.WriteLine($"{_basic.spell2}");
+            Console.WriteLine("what will you do?");
+            Console.WriteLine("(1): stay in the kitchen and fight\n(2): Jump out of the newly created 'door'");
         }
     }
 }
