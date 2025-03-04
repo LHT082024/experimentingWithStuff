@@ -5,9 +5,18 @@ using System.Threading.Tasks;
 
 namespace idk.MobsAndAttacks
 {
-    public class MobInfo(int hp)
+    public class MobInfo
     {
-        public int Hp = hp;
+        public int Hp { get; set; }
+
+        public MobInfo(int hp)
+        {
+            Hp = hp;
+        }
+        public MobInfo Clone()
+        {
+            return new MobInfo(this.Hp);
+        }
     };
 
     public class MobBricks()
@@ -16,15 +25,15 @@ namespace idk.MobsAndAttacks
             {
                 {
                     "Human",
-                    new(6)
+                    new MobInfo(6)
                 },
                 {
                     "Goblin",
-                    new(3)
+                    new MobInfo(3)
                 },
                 {
                    "Orc",
-                   new(5)
+                   new MobInfo(5)
                 }
             };
 

@@ -16,7 +16,7 @@ namespace idk.MobsAndAttacks
 
         public Mob AddSpeciesStats(string stats)
         {
-            Stuff = MobBricks.Stits[stats];
+            Stuff = MobBricks.Stits[stats].Clone();
             return this;
         }
 

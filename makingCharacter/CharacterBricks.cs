@@ -21,7 +21,7 @@ namespace idk.character
             {
                 {
                     "eldritch creature",
-                    new(10, 10, 10)
+                    new(30, 10, 10)
                 },
             };
 
