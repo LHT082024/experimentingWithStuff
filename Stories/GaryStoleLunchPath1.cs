@@ -152,14 +152,30 @@ namespace experimentingWithStuff.Stories
 
                     case "2":
                         Console.WriteLine("Another sphere of black and pink lighting forms in your hand and you toss it into the soldiers in front of you");
-                        foreach (int soldier in )
+                        foreach (var soldier in soldiermobs.Take(4))
                         {
-
+                            soldier.Stuff.Hp = soldier.Stuff.Hp - _basic.damage2;
+                            Console.WriteLine($"{soldier.Name}, {soldier.Stuff.Hp}");
+                            Console.WriteLine("-------");
                         }
+                        foreach (var soldier in soldiermobs)
+                        {
+                            Console.WriteLine($"{soldier.Name}, {soldier.Stuff.Hp}");
+                        }
+                        break;
+                        // foreach (var soldier in soldiermobs.Take(4))
+                        // {
+                        //     soldier.Stuff.Hp -= _basic.damage2;
+                        //     if (soldier.Stuff.Hp <= 0)
+                        //     {
+                        //         Console.WriteLine("one soldier has died");
+                        //     }
+                        // }
+                        // // Count the remaining soldiers (those after the first four)
+                        // int remainingSoldiersLeft = soldiermobs.Count(s => s.Stuff.Hp > 0);
 
-                        //print every soldier with 0 hp
-
-
+                        // Console.WriteLine($"There are {remainingSoldiersLeft} remaining soldiers with HP > 0");
+                        // break;
                 }
             }
 
