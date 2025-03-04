@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using idk.MobsAndAttacks;
 using idk.Stories;
@@ -35,28 +36,28 @@ namespace experimentingWithStuff.Stories
         public int slashdmgS;
         int stabdmgS;
 
+        public List<Mob> soldiermobs = new List<Mob>()
+        {
+        new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+        new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+        new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+        new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+        new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+        new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+        new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+        new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+        new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+        new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+        };
+
 
 
         public void Soldiers()
         {
-
-            soldier1health = humanMobs.Soldier1.Stuff.Hp;
-            soldier2health = humanMobs.Soldier1.Stuff.Hp;
-            soldier3health = humanMobs.Soldier1.Stuff.Hp;
-            soldier4health = humanMobs.Soldier1.Stuff.Hp;
-            soldier5health = humanMobs.Soldier1.Stuff.Hp;
-            soldier6health = humanMobs.Soldier1.Stuff.Hp;
-            soldier7health = humanMobs.Soldier1.Stuff.Hp;
-            soldier8health = humanMobs.Soldier1.Stuff.Hp;
-            soldier9health = humanMobs.Soldier1.Stuff.Hp;
-            soldier10health = humanMobs.Soldier1.Stuff.Hp;
-
             soldierAttack1 = humanMobs.Soldier1.Attacks[0];
             soldierAttack2 = humanMobs.Soldier1.Attacks[0];
             slashdmgS = humanMobs.Soldier1.Attacks[0][0];
             stabdmgS = humanMobs.Soldier1.Attacks[1][0];
-
-            // Console.WriteLine(soldierAttack1);
         }
 
 
@@ -151,11 +152,7 @@ namespace experimentingWithStuff.Stories
 
                     case "2":
                         Console.WriteLine("Another sphere of black and pink lighting forms in your hand and you toss it into the soldiers in front of you");
-                        soldier1health = soldier1health - _basic.damage2;
-                        soldier2health = soldier2health - _basic.damage2;
-                        soldier3health = soldier3health - _basic.damage2;
-                        soldier4health = soldier4health - _basic.damage2;
-                        foreach (int soldier in Soldiers)
+                        foreach (int soldier in )
                         {
 
                         }
