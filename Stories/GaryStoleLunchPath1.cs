@@ -35,19 +35,33 @@ namespace experimentingWithStuff.Stories
         public string soldierAttack2;
         public int slashdmgS;
         int stabdmgS;
+        public List<Mob> soldiermobs = new List<Mob>()
+        {
+            new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+            new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+            new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+            new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+            new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+            new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+            new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+            new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+            new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+            new Mob("BasicSoldier").AddSpeciesStats("Human").AddAttacks("Soldier"),
+        };
+
         public void Soldiers()
         {
 
-            soldier1health = humanMobs.Soldier1.Stuff.Hp;
-            soldier2health = humanMobs.Soldier1.Stuff.Hp;
-            soldier3health = humanMobs.Soldier1.Stuff.Hp;
-            soldier4health = humanMobs.Soldier1.Stuff.Hp;
-            soldier5health = humanMobs.Soldier1.Stuff.Hp;
-            soldier6health = humanMobs.Soldier1.Stuff.Hp;
-            soldier7health = humanMobs.Soldier1.Stuff.Hp;
-            soldier8health = humanMobs.Soldier1.Stuff.Hp;
-            soldier9health = humanMobs.Soldier1.Stuff.Hp;
-            soldier10health = humanMobs.Soldier1.Stuff.Hp;
+            // soldier1health = humanMobs.Soldier1.Stuff.Hp;
+            // soldier2health = humanMobs.Soldier1.Stuff.Hp;
+            // soldier3health = humanMobs.Soldier1.Stuff.Hp;
+            // soldier4health = humanMobs.Soldier1.Stuff.Hp;
+            // soldier5health = humanMobs.Soldier1.Stuff.Hp;
+            // soldier6health = humanMobs.Soldier1.Stuff.Hp;
+            // soldier7health = humanMobs.Soldier1.Stuff.Hp;
+            // soldier8health = humanMobs.Soldier1.Stuff.Hp;
+            // soldier9health = humanMobs.Soldier1.Stuff.Hp;
+            // soldier10health = humanMobs.Soldier1.Stuff.Hp;
 
             soldierAttack1 = humanMobs.Soldier1.Attacks[0];
             soldierAttack2 = humanMobs.Soldier1.Attacks[0];
@@ -147,11 +161,37 @@ namespace experimentingWithStuff.Stories
 
                     case "2":
                         Console.WriteLine("Another sphere of black and pink lighting forms in your hand and you toss it into the soldiers in front of you");
-                        soldier1health = soldier1health - _basic.damage2;
-                        soldier2health = soldier1health - _basic.damage2;
-                        soldier3health = soldier1health - _basic.damage2;
-                        soldier4health = soldier1health - _basic.damage2;
-                        Console.WriteLine("You killed 4 soldiers there are 6 left");
+                        // soldier1health = soldier1health - _basic.damage2;
+                        // soldier2health = soldier1health - _basic.damage2;
+                        // soldier3health = soldier1health - _basic.damage2;
+                        // soldier4health = soldier1health - _basic.damage2;
+                        // Console.WriteLine("You killed 4 soldiers there are 6 left");
+                        for (int i = 0; i < 4 && i < soldiermobs.Count; i++)
+                        {
+                            var soldier = soldiermobs[i];
+                            soldier.Stuff.Hp -= _basic.damage2;
+                            Console.WriteLine($"{soldier.Name}, {soldier.Stuff.Hp}");
+                            Console.WriteLine("----");
+                        }
+
+                        // Count remaining soldiers after the attack
+                        int remainingSoldiers = soldiermobs.Count - 4; // adjust based on your logic
+
+                        if (remainingSoldiers > 0)
+                        {
+                            Console.WriteLine($"You killed 4 soldiers, there are {remainingSoldiers} left.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("All soldiers have been defeated.");
+                        }
+
+                        // Optionally print the health of all soldiers if needed
+                        Console.WriteLine("Current health of all soldiers:");
+                        foreach (var soldier in soldiermobs)
+                        {
+                            Console.WriteLine($"{soldier.Name}, {soldier.Stuff.Hp}");
+                        }
                         break;
 
                     case "3":
