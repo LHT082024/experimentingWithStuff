@@ -193,7 +193,19 @@ namespace experimentingWithStuff.Stories
 
         public void CombatAgainstSoldiers()
         {
-            string introtext = "Four dead soldiers lie in front of you. The other six are shocked"
+            string introtext = "Four dead soldiers lie in front of you. The other six are shocked and a bit scared. But they stand strong and go for the attack";
+            for (int i = 0; i < introtext.Length; i++)
+            {
+                if (Console.KeyAvailable)
+                {
+                    Console.ReadKey(true);
+                    Console.Write(introtext.Substring(i));  // Instantly print remaining text
+                    break;  // Exit the loop
+                }
+                Console.Write(introtext[i]);
+                Thread.Sleep(60);
+            }
+
         }
 
         public void Courtyard()
