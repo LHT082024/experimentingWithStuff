@@ -259,5 +259,21 @@ refrigirators where everyone (except the lord) stores their lunch. You open the 
             Console.WriteLine("You are dead\n Game over");
         }
 
+        public void WinAgainstDragon()
+        {
+            string winDragon = "The soliders are happy that you fended of such a scary beast. You get a 60 gold bonus and the job is finished";
+            for (int i = 0; i < winDragon.Length; i++)
+            {
+                if (Console.KeyAvailable)
+                {
+                    Console.ReadKey(true);
+                    Console.Write(winDragon.Substring(i));  // Instantly print remaining text
+                    break;  // Exit the loop
+                }
+                Console.Write(winDragon[i]);
+                Thread.Sleep(60);
+            }
+        }
+
     }
 }

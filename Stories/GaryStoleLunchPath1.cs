@@ -154,6 +154,24 @@ namespace experimentingWithStuff.Stories
                         Console.WriteLine("You killed 4 soldiers there are 6 left");
                         break;
 
+                    case "3":
+                        Console.WriteLine("You take a steb back and with a fake suprised face you say.");
+                        Console.WriteLine("(1): It was like this when I got there\n(2): a dragon did it\n(3): Gary did it");
+                        _basic.playerInput = Console.ReadLine();
+                        if (_basic.playerInput == "1")
+                        {
+                            Console.WriteLine("the soldiers dosent belive it, multiple soldiers stab you and you die bleeding on the floor");
+                            tenMen = true;
+                            _basic.GameOVer();
+                        }
+                        else if (_basic.playerInput == "2")
+                        {
+                            Console.WriteLine("the soldiers look up and see a dragon flying over the castle");
+                            Console.WriteLine("they lower their weapons and one of them shake your hand suprised you could survive that scary creature");
+                            tenMen = true;
+                            _basic.WinAgainstDragon();
+                        }
+                        break;
                 }
             }
 
